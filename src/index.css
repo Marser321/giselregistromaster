@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Metropolis (tipografía sans de marca) auto-hospedada en /public/fonts.
+   Playfair Display (display) y Parisienne (script) cargan vía Google en index.html. */
+@font-face {
+  font-family: "Metropolis";
+  src: url("/fonts/Metropolis-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("/fonts/Metropolis-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("/fonts/Metropolis-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("/fonts/Metropolis-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Playfair Display (display) y Parisienne (script) — fuentes de marca auto-hospedadas. */
+@font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-ExtraBold.ttf") format("truetype"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-Black.ttf") format("truetype"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Parisienne"; src: url("/fonts/Parisienne-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Valores por defecto (paleta de marca Gisella: navy + dorado + turquesa).
+   src/lib/theme.ts los sobreescribe desde siteConfig.theme. */
+:root {
+  --background: 215 45% 8%;
+  --foreground: 210 25% 96%;
+  --muted: 215 30% 14%;
+  --muted-foreground: 210 12% 66%;
+  --card: 215 35% 11%;
+  --card-foreground: 210 25% 96%;
+  --border: 214 28% 22%;
+  --accent: 33 63% 56%;
+  --accent-foreground: 215 45% 8%;
+  --ring: 33 63% 56%;
+  --accent-2: 193 60% 55%;
+  --ivory: 42 30% 93%;
+  --ink: 215 43% 15%;
+  --champagne: 38 48% 78%;
+
+  --radius: 18px;
+  --font-display: "Playfair Display";
+  --font-sans: "Metropolis";
+  --font-script: "Parisienne";
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    background: hsl(var(--background));
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.25);
+  }
+}
+
+@layer components {
+  /* Texto con degradado sutil de acento para headlines destacados. */
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      120deg,
+      hsl(var(--accent)),
+      hsl(var(--accent) / 0.7)
+    );
+  }
+
+  /* Tarjeta de cristal premium. */
+  .glass {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    @apply border border-border/60 shadow-card;
+  }
+
+  /* Línea fina de acento. */
+  .hairline {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--accent) / 0.5),
+      transparent
+    );
+  }
+
+  .editorial-rule {
+    background: linear-gradient(90deg, hsl(var(--accent) / 0.75), transparent);
+  }
+
+  .ivory-grain {
+    background-image:
+      radial-gradient(circle at 15% 18%, hsl(var(--accent) / 0.07), transparent 22rem),
+      linear-gradient(115deg, transparent 0 48%, hsl(var(--ink) / 0.018) 49% 51%, transparent 52% 100%);
+  }
+
+  .eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.24em];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
