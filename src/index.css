@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Metropolis (tipografía sans de marca) auto-hospedada en /public/fonts.
-   Playfair Display (display) y Parisienne (script) cargan vía Google en index.html. */
+/* Tipografías de marca auto-hospedadas en /public/fonts (sin Google Fonts):
+   Metropolis (sans), Playfair Display (display) y Parisienne (script). */
 @font-face {
   font-family: "Metropolis";
   src: url("/fonts/Metropolis-Regular.otf") format("opentype");

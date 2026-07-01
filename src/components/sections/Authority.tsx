@@ -20,9 +20,10 @@ export function Authority() {
                   sizes="(min-width: 1024px) 480px, 90vw"
                   alt={authority.name}
                   width={1200}
-                  height={1800}
+                  height={1500}
                   className="h-full w-full object-cover object-top"
                   loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="flex h-full w-full items-center justify-center bg-white/70">

@@ -5,6 +5,13 @@
 > por código** en cada slot; al generar las definitivas, **se reemplazan en la MISMA ruta y
 > con el MISMO nombre** y aparecen solas (sin tocar código).
 
+> **Interino por código (ya activo):** el motivo de marca `Circles` (anillos dorados +
+> destellos + velo turquesa) se renderiza por código detrás del hero, el cierre y las
+> secciones oscuras, así la página se ve pulida **sin** las imágenes IA. Los **fondos de
+> sección oscuros** están a baja opacidad (0.14–0.20 en `site.config.ts`) para no tapar los
+> anillos; al reemplazar por la imagen IA (misma ruta) subí esa `opacity` a ~0.4 si querés que
+> la foto domine. Los **retratos** siguen siendo el asset principal de cada slot.
+
 ## Cómo generar y reemplazar (workflow)
 1. Elegí el generador. **Recomendado: image‑to‑image** (Gemini / *Nano Banana*) para
    **conservar el parecido real** de la Dra. en los retratos y el banner.

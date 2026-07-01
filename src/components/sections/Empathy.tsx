@@ -47,9 +47,10 @@ export function Empathy() {
                   sizes="(min-width: 1024px) 500px, 90vw"
                   alt={intro.imageAlt ?? ""}
                   width={1200}
-                  height={1800}
+                  height={1500}
                   className="h-full w-full object-cover object-top"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

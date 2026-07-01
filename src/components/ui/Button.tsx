@@ -24,7 +24,22 @@ export interface ButtonProps
   href?: string;
 }
 
-/** Botón. Si recibe `href` renderiza un <a> con el mismo estilo (CTA). */
+/** Estado "pendiente" (sin `href` aún): pill silenciado, lectura intencional
+ *  —no un CTA dorado apagado que parezca roto. Se acompaña con `cta.note`. */
+const pending =
+  "cursor-not-allowed border border-white/15 bg-white/[0.05] text-white/55 shadow-none font-semibold";
+
+const base = cn(
+  "inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300 ease-out",
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+  "active:scale-[0.98] whitespace-nowrap"
+);
+
+/**
+ * Botón. Con `href` renderiza un <a> (CTA activo); sin `href` renderiza un
+ * <button> que, si va `disabled`, usa el estilo "pendiente".
+ * Nota: `disabled` no aplica a enlaces — cuando hay `href` el CTA siempre va activo.
+ */
 export function Button({
   className,
   variant = "accent",
@@ -33,15 +48,6 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
-  const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300 ease-out",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-    "active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap",
-    variants[variant],
-    sizes[size],
-    className
-  );
-
   if (href) {
     const isExternal = /^https?:\/\//i.test(href);
     return (
@@ -49,14 +55,17 @@ export function Button({
         href={href}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
-        className={classes}
+        className={cn(base, variants[variant], sizes[size], className)}
       >
         {children}
       </a>
     );
   }
   return (
-    <button className={classes} {...props}>
+    <button
+      className={cn(base, props.disabled ? pending : variants[variant], sizes[size], className)}
+      {...props}
+    >
       {children}
     </button>
   );

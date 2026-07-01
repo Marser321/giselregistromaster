@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
   meta: {
     title: "Masterclass gratuita con la Dra. Gisella Arias · Método Ser Uno",
     description:
-      "Masterclass en vivo y gratuita: cómo salvar tu matrimonio en 12 semanas sin que tu esposo lo sepa, con el Método Ser Uno de la Dra. Gisella Arias-Olson.",
+      "Masterclass en vivo y gratuita: cómo salvar tu matrimonio sin que tu esposo lo sepa, con el Método Ser Uno de la Dra. Gisella Arias-Olson.",
     brand: "Dra. Gisella Arias-Olson · Ser Uno",
   },
 
@@ -55,39 +55,41 @@ export const siteConfig: SiteConfig = {
   // referencias/imagenes-prompts.md (mismas rutas). Render con overlay en Section.tsx.
   sectionBackgrounds: {
     intro: {
-      src: "/img/bg/intro.jpg",
+      src: "/img/editorial/intro-editorial-v2.webp",
       position: "center",
-      opacity: 0.16,
+      opacity: 0.24,
       tone: "ivory",
     },
     beneficios: {
-      src: "/img/bg/beneficios.jpg",
+      src: "/img/editorial/benefits-editorial-v2.webp",
       position: "center",
-      opacity: 0.42,
+      // Bajo: el motivo Circles por código es la base. Al reemplazar por la
+      // imagen IA (misma ruta), subir opacity a ~0.4 si se quiere que domine.
+      opacity: 0.28,
       tone: "dark",
     },
     pilares: {
       src: "/img/editorial/pillars-atmosphere.webp",
       position: "left bottom",
-      opacity: 0.56,
+      opacity: 0.2,
       tone: "dark",
     },
     instructor: {
-      src: "/img/bg/instructor.jpg",
+      src: "/img/editorial/authority-editorial-v2.webp",
       position: "center",
-      opacity: 0.16,
+      opacity: 0.22,
       tone: "ivory",
     },
     testimonios: {
-      src: "/img/bg/testimonios.jpg",
+      src: "/img/editorial/testimonials-editorial-v2.webp",
       position: "center",
-      opacity: 0.44,
+      opacity: 0.26,
       tone: "dark",
     },
     faq: {
-      src: "/img/bg/faq.jpg",
+      src: "/img/editorial/faq-editorial-v2.webp",
       position: "center",
-      opacity: 0.14,
+      opacity: 0.2,
       tone: "ivory",
     },
   },
@@ -103,14 +105,14 @@ export const siteConfig: SiteConfig = {
   // ===================== EVENTO =====================
   event: {
     // Derivado del ISO actual. Confirmar con el cliente antes de publicar.
-    label: "Jueves, 16 de julio · 9:00 PM EDT · 8:00 PM COL · 7:00 PM MX",
-    datetimeISO: "2026-07-16T20:00:00-05:00",
+    label: "Martes, 21 de julio · 9:00 PM EDT · 8:00 PM COL · 7:00 PM MX",
+    datetimeISO: "2026-07-21T20:00:00-05:00",
   },
 
   // ===================== HERO =====================
   hero: {
     badge: "MASTERCLASS EN VIVO Y GRATUITA",
-    headline: "Cómo salvar tu matrimonio en 12 semanas,",
+    headline: "Cómo salvar tu matrimonio,",
     highlight: "sin que tu esposo lo sepa",
     subheadline:
       "Masterclass en vivo y gratuita con la Dra. Gisella Arias-Olson — Psicóloga Clínica, especialista en Neurociencia y Terapia de Familia. Aunque ya hayas probado terapia y no haya funcionado.",
@@ -119,9 +121,9 @@ export const siteConfig: SiteConfig = {
     // — ver referencias/imagenes-prompts.md, misma ruta).
     image: "/img/editorial/hero-atmosphere.webp",
     imageAlt: "Dra. Gisella Arias-Olson",
-    portrait: "/img/editorial/gisella-hero-720.webp",
+    portrait: "/img/editorial/gisella-hero-editorial-v2-720.webp",
     portraitSrcSet:
-      "/img/editorial/gisella-hero-720.webp 720w, /img/editorial/gisella-hero-1200.webp 1200w",
+      "/img/editorial/gisella-hero-editorial-v2-720.webp 720w, /img/editorial/gisella-hero-editorial-v2-1200.webp 1200w",
     portraitAlt: "Dra. Gisella Arias-Olson",
   },
 
@@ -134,9 +136,9 @@ export const siteConfig: SiteConfig = {
     ],
     closing:
       "No necesitas que él venga. No necesitas que él cambie primero. Solo necesitas 60 minutos y la disposición de mirar hacia adentro.",
-    image: "/img/editorial/gisella-empathy-720.webp",
+    image: "/img/editorial/gisella-empathy-editorial-v2-720.webp",
     imageSrcSet:
-      "/img/editorial/gisella-empathy-720.webp 720w, /img/editorial/gisella-empathy-1200.webp 1200w",
+      "/img/editorial/gisella-empathy-editorial-v2-720.webp 720w, /img/editorial/gisella-empathy-editorial-v2-1200.webp 1200w",
     imageAlt: "Dra. Gisella Arias-Olson en un gesto de introspección y calma",
   },
 
@@ -165,9 +167,9 @@ export const siteConfig: SiteConfig = {
     ],
     // Placeholder tratado (grado navy + destellos). Reemplazar por la versión IA
     // generada con referencias/imagenes-prompts.md (misma ruta).
-    photo: "/img/editorial/gisella-authority-720.webp",
+    photo: "/img/editorial/gisella-authority-editorial-v2-720.webp",
     photoSrcSet:
-      "/img/editorial/gisella-authority-720.webp 720w, /img/editorial/gisella-authority-1200.webp 1200w",
+      "/img/editorial/gisella-authority-editorial-v2-720.webp 720w, /img/editorial/gisella-authority-editorial-v2-1200.webp 1200w",
     media: [],
   },
 
@@ -217,9 +219,9 @@ export const siteConfig: SiteConfig = {
         ],
       },
     ],
-    image: "/img/editorial/gisella-method-720.webp",
+    image: "/img/editorial/gisella-method-editorial-v2-720.webp",
     imageSrcSet:
-      "/img/editorial/gisella-method-720.webp 720w, /img/editorial/gisella-method-1200.webp 1200w",
+      "/img/editorial/gisella-method-editorial-v2-720.webp 720w, /img/editorial/gisella-method-editorial-v2-1200.webp 1200w",
     imageAlt: "Dra. Gisella sosteniendo un corazón dorado — el Método Ser Uno",
   },
 
@@ -353,9 +355,9 @@ export const siteConfig: SiteConfig = {
     headline: "Tu matrimonio no tiene que terminar. Pero la espera, sí.",
     body: "Llevas demasiado tiempo esperando que algo cambie: que él lo entienda, el momento correcto, que las cosas mejoren solas. Pero algo te trajo hasta aquí hoy, y no es casualidad. Esta masterclass no te va a pedir que te rindas ni que aguantes más: te va a mostrar cómo activar, desde tu SER, el tipo de amor que ya vive dentro de ti.",
     image: "/img/editorial/final-atmosphere.webp",
-    photo: "/img/editorial/gisella-time-1280.webp",
+    photo: "/img/editorial/gisella-closing-editorial-v2-720.webp",
     photoSrcSet:
-      "/img/editorial/gisella-time-1280.webp 1280w, /img/editorial/gisella-time-1920.webp 1920w",
+      "/img/editorial/gisella-closing-editorial-v2-720.webp 720w, /img/editorial/gisella-closing-editorial-v2-1200.webp 1200w",
   },
 
   // ===================== FOOTER =====================

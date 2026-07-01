@@ -29,7 +29,7 @@ export function StickyCta() {
         show ? "translate-y-0" : "translate-y-full"
       )}
     >
-      <div className="border-t border-white/10 bg-background/94 shadow-[0_-18px_50px_-35px_rgba(0,0,0,.8)] backdrop-blur-xl">
+      <div className="border-t border-white/10 bg-background/[0.94] shadow-[0_-18px_50px_-35px_rgba(0,0,0,.8)] backdrop-blur-xl">
         <div className="container flex items-center justify-between gap-4 py-1">
           <p className="hidden text-xs text-white/48 sm:block">
             {event.label}

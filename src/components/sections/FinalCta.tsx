@@ -2,6 +2,7 @@ import { siteConfig } from "@/content/site.config";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Countdown } from "@/components/Countdown";
+import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 
 export function FinalCta() {
   const { finalCta, event, cta } = siteConfig;
@@ -22,6 +23,9 @@ export function FinalCta() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-transparent to-background/75" />
         </div>
       )}
+
+      {/* Motivo de marca por código en el cierre. */}
+      <BackgroundLayer vignette={false} />
 
       <div className="container relative z-10 grid items-center gap-14 px-6 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
         <div>
@@ -62,10 +66,11 @@ export function FinalCta() {
                   srcSet={finalCta.photoSrcSet}
                   sizes="(min-width: 1024px) 500px, 90vw"
                   alt=""
-                  width={1920}
-                  height={1315}
+                  width={1200}
+                  height={1500}
                   className="h-full w-full object-cover object-center"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
               </div>

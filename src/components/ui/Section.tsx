@@ -2,6 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/content/site.config";
 import type { SectionTone } from "@/content/types";
+import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 
 interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   id?: string;
@@ -40,17 +41,24 @@ export function Section({
       )}
       {...props}
     >
+      {/* Motivo de marca por código (anillos + destellos): base de las secciones
+          oscuras. Se ve premium y on-brand sin depender de imágenes IA. */}
+      {resolvedTone === "dark" && <BackgroundLayer vignette={false} />}
+
       {bg && (
         <div aria-hidden className="absolute inset-0 z-0">
           <img
             src={bg.src}
             alt=""
+            width={1920}
+            height={1080}
             className="h-full w-full object-cover"
             style={{
               objectPosition: bg.position ?? "center",
               opacity: bg.opacity ?? 0.42,
             }}
             loading="lazy"
+            decoding="async"
           />
           <div
             className={cn(

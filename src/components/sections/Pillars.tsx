@@ -27,9 +27,10 @@ export function Pillars() {
                   sizes="(min-width: 1024px) 430px, 90vw"
                   alt={pillars.imageAlt ?? ""}
                   width={1200}
-                  height={1800}
+                  height={1500}
                   className="h-full w-full object-cover object-center"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
               </div>

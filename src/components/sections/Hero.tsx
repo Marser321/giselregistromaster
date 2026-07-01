@@ -4,6 +4,7 @@ import { siteConfig } from "@/content/site.config";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Countdown } from "@/components/Countdown";
+import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 
 const fade = (delay: number, reduceMotion: boolean | null) => ({
   initial: reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 },
@@ -26,12 +27,17 @@ export function Hero() {
             alt=""
             width={1920}
             height={1080}
+            {...{ fetchpriority: "high" }}
+            decoding="async"
             className="h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,hsl(var(--background)/.98)_0%,hsl(var(--background)/.88)_48%,hsl(var(--background)/.26)_100%)]" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-transparent to-background" />
         </div>
       )}
+
+      {/* Motivo de marca por código sobre la atmósfera del hero. */}
+      <BackgroundLayer vignette={false} />
 
       <div className="container relative z-10 px-6 pb-16 pt-6 sm:pt-8 lg:min-h-[760px] lg:pb-14">
         <motion.div {...fade(0, reduceMotion)} className="flex items-center justify-between">
@@ -48,8 +54,8 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <div className="grid items-center gap-12 pb-2 pt-8 lg:grid-cols-[minmax(0,1.14fr)_minmax(340px,.86fr)] lg:gap-10 lg:pt-3">
-          <div className="relative z-10 max-w-3xl">
+        <div className="grid min-w-0 items-center gap-12 pb-2 pt-8 lg:grid-cols-[minmax(0,1.14fr)_minmax(340px,.86fr)] lg:gap-10 lg:pt-3">
+          <div className="relative z-10 min-w-0 max-w-3xl">
             <motion.div {...fade(0.06, reduceMotion)}>
               <Badge className="border-accent/30 bg-accent/10 px-4 py-1.5 text-[10px] tracking-[0.2em]">
                 <span className="inline-block h-1 w-1 rounded-full bg-accent" />
@@ -100,7 +106,7 @@ export function Hero() {
               <Button
                 href={cta.href}
                 size="lg"
-                className="w-full sm:w-auto"
+                className="min-w-0 w-full max-[374px]:px-4 sm:w-auto"
                 disabled={!cta.href}
               >
                 {cta.label}
@@ -120,14 +126,16 @@ export function Hero() {
             >
               <div className="absolute -inset-3 rounded-[2.1rem] border border-accent/25" />
               <div className="absolute -left-7 top-14 h-32 w-px bg-gradient-to-b from-transparent via-accent to-transparent" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] bg-ivory shadow-editorial ring-1 ring-white/10">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] bg-gradient-to-br from-muted to-background shadow-editorial ring-1 ring-white/10">
                 <img
                   src={hero.portrait}
                   srcSet={hero.portraitSrcSet}
                   sizes="(min-width: 1024px) 430px, 86vw"
                   alt={hero.portraitAlt ?? hero.imageAlt ?? ""}
                   width={1200}
-                  height={1800}
+                  height={1500}
+                  {...{ fetchpriority: "high" }}
+                  decoding="async"
                   className="h-full w-full object-cover object-top"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent" />
