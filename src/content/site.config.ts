@@ -95,11 +95,26 @@ export const siteConfig: SiteConfig = {
   },
 
   // ===================== CTA =====================
+  // href apunta al ancla interna del formulario embebido (#reservar). Todos los
+  // botones (Hero, StickyCta, FinalCta, Vsl) hacen scroll suave hasta el form.
   cta: {
     label: "✨ Sí quiero mi lugar en la masterclass",
-    // Pendiente externo: pegar aquí el link público real del formulario de registro.
-    // href: "https://tu-plataforma.com/registro-masterclass",
-    note: "Registro pendiente de activar · Gratuita · 60 minutos · Sin compromiso",
+    href: "#reservar",
+    note: "Gratuita · 60 minutos · Sin compromiso",
+  },
+
+  // ===================== FORMULARIO DE REGISTRO =====================
+  // Form de HighLevel/LeadConnector (builder: admediasolution.com, white-label GHL).
+  // Embed inline estándar construido desde el formId (último segmento del URL del
+  // builder). Si la cuenta usa un dominio propio, reemplazar `src` por el snippet
+  // exacto del botón "</> Integrate form". El alto real lo ajusta form_embed.js.
+  form: {
+    src: "https://api.leadconnectorhq.com/widget/form/7DMYdErV9zBFMDqFc1XP",
+    formId: "7DMYdErV9zBFMDqFc1XP",
+    height: 640,
+    heading: "Reserva tu lugar en la masterclass",
+    subheading:
+      "Completa tus datos y recibe el acceso. Cupos limitados · 100% gratuita.",
   },
 
   // ===================== EVENTO =====================

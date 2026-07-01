@@ -2,6 +2,7 @@ import { siteConfig } from "@/content/site.config";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Countdown } from "@/components/Countdown";
+import { RegistrationForm } from "@/components/RegistrationForm";
 import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 
 export function FinalCta() {
@@ -27,7 +28,7 @@ export function FinalCta() {
       {/* Motivo de marca por código en el cierre. */}
       <BackgroundLayer vignette={false} />
 
-      <div className="container relative z-10 grid items-center gap-14 px-6 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
+      <div className="container relative z-10 grid items-start gap-14 px-6 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
         <div>
           <Reveal>
             <p className="eyebrow text-accent">{finalCta.subhead}</p>
@@ -43,16 +44,26 @@ export function FinalCta() {
             <Countdown datetimeISO={event.datetimeISO} />
           </Reveal>
 
-          <Reveal delay={0.14} className="mt-7 flex flex-col items-start gap-2.5">
-            <Button
-              href={cta.href}
-              size="lg"
-              className="w-full sm:w-auto"
-              disabled={!cta.href}
-            >
-              {cta.label}
-            </Button>
-            {cta.note && <span className="text-[10px] text-white/42 sm:text-xs">{cta.note}</span>}
+          <Reveal delay={0.14} className="mt-8">
+            {siteConfig.form ? (
+              <RegistrationForm />
+            ) : (
+              <div className="flex flex-col items-start gap-2.5">
+                <Button
+                  href={cta.href}
+                  size="lg"
+                  className="w-full sm:w-auto"
+                  disabled={!cta.href}
+                >
+                  {cta.label}
+                </Button>
+                {cta.note && (
+                  <span className="text-[10px] text-white/42 sm:text-xs">
+                    {cta.note}
+                  </span>
+                )}
+              </div>
+            )}
           </Reveal>
         </div>
 

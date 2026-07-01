@@ -154,6 +154,20 @@ export interface Vsl {
   poster?: string;
 }
 
+/** Formulario de registro embebido (HighLevel / LeadConnector). Opcional:
+ *  si falta, la sección de cierre cae al CTA por enlace (`cta.href`). */
+export interface RegistrationForm {
+  /** src del iframe, p. ej. "https://api.leadconnectorhq.com/widget/form/<formId>". */
+  src: string;
+  /** formId = último segmento del URL del builder de HighLevel. */
+  formId: string;
+  /** Altura inicial en px antes de que form_embed.js la ajuste vía postMessage. */
+  height?: number;
+  /** Encabezado/subtítulo opcional encima del formulario. */
+  heading?: string;
+  subheading?: string;
+}
+
 export interface SiteConfig {
   meta: {
     title: string;
@@ -165,6 +179,8 @@ export interface SiteConfig {
    *  (p. ej. "pilares", "testimonios"). La renderiza Section.tsx con overlay. */
   sectionBackgrounds?: Record<string, string | SectionBackgroundConfig>;
   cta: Cta;
+  /** Formulario de registro embebido. Si existe, la sección de cierre lo muestra. */
+  form?: RegistrationForm;
   event: EventInfo;
   hero: Hero;
   intro?: Intro;
