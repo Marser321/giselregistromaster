@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/content/site.config";
-import { Button } from "@/components/ui/Button";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { cn } from "@/lib/utils";
 
 /** Barra CTA fija que aparece tras hacer scroll. Aumenta conversión. */
@@ -34,13 +34,9 @@ export function StickyCta() {
           <p className="hidden text-xs text-white/48 sm:block">
             {event.label}
           </p>
-          <Button
-            href={cta.href}
-            className="h-9 w-full px-6 text-xs sm:w-auto"
-            disabled={!cta.href}
-          >
+          <CtaButton className="h-9 w-full px-6 text-xs sm:w-auto">
             {cta.label}
-          </Button>
+          </CtaButton>
         </div>
       </div>
     </div>

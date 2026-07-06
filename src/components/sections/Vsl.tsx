@@ -1,7 +1,7 @@
 import { siteConfig } from "@/content/site.config";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
+import { CtaButton } from "@/components/ui/CtaButton";
 
 /** Sección protagonista: el Video Sales Letter. */
 export function Vsl() {
@@ -44,9 +44,7 @@ export function Vsl() {
       </Reveal>
 
       <Reveal delay={0.16} className="mt-8 flex flex-col items-center gap-3">
-        <Button href={cta.href} size="lg" disabled={!cta.href}>
-          {cta.label}
-        </Button>
+        <CtaButton size="lg">{cta.label}</CtaButton>
         {cta.note && (
           <span className="text-xs text-muted-foreground">{cta.note}</span>
         )}

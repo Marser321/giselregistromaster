@@ -9,7 +9,7 @@ export function Footer() {
           {meta.brand}
         </p>
         <p>{footer.legal}</p>
-        {footer.credit && <p className="text-muted-foreground/60">{footer.credit}</p>}
+        {footer.credit && <p className="text-muted-foreground/85">{footer.credit}</p>}
       </div>
     </footer>
   );

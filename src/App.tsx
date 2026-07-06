@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Hero } from "@/components/sections/Hero";
 import { Empathy } from "@/components/sections/Empathy";
 import { Vsl } from "@/components/sections/Vsl";
@@ -9,6 +10,9 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { StickyCta } from "@/components/StickyCta";
+import { FormModalProvider } from "@/components/form/FormModalContext";
+import { FormModal } from "@/components/form/FormModal";
+import { ThankYou } from "@/components/pages/ThankYou";
 
 /**
  * Orden narrativo del copy de la Dra. Gisella (Ser Uno):
@@ -16,19 +20,34 @@ import { StickyCta } from "@/components/StickyCta";
  * Las secciones opcionales (Vsl, Benefits, Faq) se auto-ocultan si no hay datos.
  */
 export default function App() {
+  const [isThankYou, setIsThankYou] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname === "/gracias" || window.location.pathname === "/gracias/") {
+      setIsThankYou(true);
+    }
+  }, []);
+
+  if (isThankYou) {
+    return <ThankYou />;
+  }
+
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
-      <Hero />
-      <Empathy />
-      <Vsl />
-      <Benefits />
-      <Pillars />
-      <Authority />
-      <Testimonials />
-      <Faq />
-      <FinalCta />
-      <Footer />
-      <StickyCta />
-    </main>
+    <FormModalProvider>
+      <main className="relative min-h-screen overflow-x-hidden">
+        <Hero />
+        <Empathy />
+        <Vsl />
+        <Benefits />
+        <Pillars />
+        <Authority />
+        <Testimonials />
+        <Faq />
+        <FinalCta />
+        <Footer />
+        <StickyCta />
+      </main>
+      <FormModal />
+    </FormModalProvider>
   );
 }

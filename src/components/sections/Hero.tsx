@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { CalendarClock, Users } from "lucide-react";
 import { siteConfig } from "@/content/site.config";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { Countdown } from "@/components/Countdown";
 import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 
@@ -39,22 +39,30 @@ export function Hero() {
       {/* Motivo de marca por código sobre la atmósfera del hero. */}
       <BackgroundLayer vignette={false} />
 
+      {/* Scrim superior: mantiene el header legible sobre cualquier imagen del hero. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-28 bg-gradient-to-b from-background/70 to-transparent"
+      />
+
       <div className="container relative z-10 px-6 pb-16 pt-6 sm:pt-8 lg:min-h-[760px] lg:pb-14">
-        <motion.div {...fade(0, reduceMotion)} className="flex items-center justify-between">
+        <motion.div
+          {...fade(0, reduceMotion)}
+          className="flex items-center justify-between gap-4"
+        >
+          {/* Logo oficial de marca */}
           <img
             src="/brand/logo-blanco.png"
-            alt="Dra. Gisella Arias-Olson"
-            width={220}
-            height={92}
-            className="h-12 w-auto sm:h-14"
+            alt="Dra. Gisella Arias-Olson · Ser Uno"
+            className="h-14 w-auto object-contain"
           />
-          <div className="hidden items-center gap-3 text-[10px] uppercase tracking-[0.22em] text-white/45 sm:flex">
-            <span className="h-px w-10 bg-accent/65" />
-            {siteConfig.meta.brand}
-          </div>
+          {/* CTA compacto siempre visible en la primera pantalla: abre el popup. */}
+          <CtaButton className="h-10 px-5 text-xs sm:text-sm">
+            {cta.shortLabel ?? cta.label}
+          </CtaButton>
         </motion.div>
 
-        <div className="grid min-w-0 items-center gap-12 pb-2 pt-8 lg:grid-cols-[minmax(0,1.14fr)_minmax(340px,.86fr)] lg:gap-10 lg:pt-3">
+        <div className="grid min-w-0 items-center gap-9 pb-2 pt-8 sm:gap-12 lg:grid-cols-[minmax(0,1.14fr)_minmax(340px,.86fr)] lg:gap-10 lg:pt-3">
           <div className="relative z-10 min-w-0 max-w-3xl">
             <motion.div {...fade(0.06, reduceMotion)}>
               <Badge className="border-accent/30 bg-accent/10 px-4 py-1.5 text-[10px] tracking-[0.2em]">
@@ -103,16 +111,14 @@ export function Hero() {
               {...fade(0.33, reduceMotion)}
               className="mt-5 flex flex-col items-start gap-2.5"
             >
-              <Button
-                href={cta.href}
+              <CtaButton
                 size="lg"
                 className="min-w-0 w-full max-[374px]:px-4 sm:w-auto"
-                disabled={!cta.href}
               >
                 {cta.label}
-              </Button>
+              </CtaButton>
               {cta.note && (
-                <span className="text-[10px] leading-relaxed text-white/45 sm:text-xs">
+                <span className="text-[10px] leading-relaxed text-white/62 sm:text-xs">
                   {cta.note}
                 </span>
               )}

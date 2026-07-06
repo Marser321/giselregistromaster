@@ -57,6 +57,8 @@ export interface Theme {
 
 export interface Cta {
   label: string;
+  /** Etiqueta corta para espacios compactos (header, sticky). Cae a `label`. */
+  shortLabel?: string;
   /** URL de registro o checkout. Si falta, los botones quedan deshabilitados. */
   href?: string;
   /** Texto pequeño bajo el botón, p. ej. "Sin tarjeta. Sin compromiso." */
@@ -108,7 +110,7 @@ export interface Authority {
   title: string;
   bio: string;
   credentials: string[];
-  /** Ruta a la foto en /public, p. ej. "/img/editorial/gisella-authority-720.webp". Opcional. */
+  /** Ruta a la foto en /public, p. ej. "/img/editorial/gisella-authority-editorial-v2-720.webp". Opcional. */
   photo?: string;
   photoSrcSet?: string;
   mediaEyebrow?: string;

@@ -142,7 +142,7 @@ export function Testimonials() {
                       )}
                     </div>
                     {testimonial.videoLength && (
-                      <p className="border-t border-white/10 px-4 py-2 text-xs text-white/46">
+                      <p className="border-t border-white/10 px-4 py-2 text-xs text-white/60">
                         Duración: {testimonial.videoLength}
                       </p>
                     )}
@@ -155,7 +155,7 @@ export function Testimonials() {
                 <div className="mt-8 flex items-end justify-between gap-4 border-t border-white/12 pt-5">
                   <div>
                     <p className="text-sm font-semibold text-white">{testimonial.name}</p>
-                    <p className="mt-1 text-xs text-white/45">{testimonial.location}</p>
+                    <p className="mt-1 text-xs text-white/60">{testimonial.location}</p>
                   </div>
                   <span className="inline-flex items-center gap-1.5 text-accent/75">
                     <BadgeCheck className="h-4 w-4" />
@@ -207,7 +207,7 @@ export function Testimonials() {
       </div>
 
       {testimonials.disclaimer && (
-        <p className="mt-9 max-w-3xl text-xs leading-relaxed text-white/36">
+        <p className="mt-9 max-w-3xl text-xs leading-relaxed text-white/60">
           {testimonials.disclaimer}
         </p>
       )}

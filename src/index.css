@@ -97,6 +97,26 @@
     );
   }
 
+  /* Degradado dorado→turquesa para acentos decorativos sutiles. */
+  .text-gradient-duo {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--accent)),
+      hsl(var(--accent-2))
+    );
+  }
+
+  /* Línea fina de acento turquesa. */
+  .hairline-accent2 {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--accent-2) / 0.4),
+      transparent
+    );
+  }
+
   /* Tarjeta de cristal premium. */
   .glass {
     background: hsl(var(--card) / 0.7);

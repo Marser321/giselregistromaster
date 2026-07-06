@@ -1,8 +1,7 @@
 import { siteConfig } from "@/content/site.config";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { Countdown } from "@/components/Countdown";
-import { RegistrationForm } from "@/components/RegistrationForm";
 import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 
 export function FinalCta() {
@@ -45,25 +44,16 @@ export function FinalCta() {
           </Reveal>
 
           <Reveal delay={0.14} className="mt-8">
-            {siteConfig.form ? (
-              <RegistrationForm />
-            ) : (
-              <div className="flex flex-col items-start gap-2.5">
-                <Button
-                  href={cta.href}
-                  size="lg"
-                  className="w-full sm:w-auto"
-                  disabled={!cta.href}
-                >
-                  {cta.label}
-                </Button>
-                {cta.note && (
-                  <span className="text-[10px] text-white/42 sm:text-xs">
-                    {cta.note}
-                  </span>
-                )}
-              </div>
-            )}
+            <div className="flex flex-col items-start gap-2.5">
+              <CtaButton size="lg" className="w-full sm:w-auto">
+                {cta.label}
+              </CtaButton>
+              {cta.note && (
+                <span className="text-[10px] text-white/62 sm:text-xs">
+                  {cta.note}
+                </span>
+              )}
+            </div>
           </Reveal>
         </div>
 

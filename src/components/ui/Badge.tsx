@@ -1,10 +1,11 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "accent" | "muted" | "outline";
+type Variant = "accent" | "accent2" | "muted" | "outline";
 
 const variants: Record<Variant, string> = {
   accent: "bg-accent/15 text-accent border-accent/30",
+  accent2: "bg-accent2/12 text-accent2 border-accent2/25",
   muted: "bg-muted/70 text-muted-foreground border-border",
   outline: "bg-transparent text-foreground border-border",
 };

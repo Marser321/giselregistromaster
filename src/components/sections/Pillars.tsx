@@ -15,7 +15,7 @@ export function Pillars() {
         </h2>
       </Reveal>
 
-      <div className="mt-14 grid items-start gap-14 lg:grid-cols-[.82fr_1.18fr] lg:gap-20">
+      <div className="mt-14 grid items-start gap-10 sm:gap-14 lg:grid-cols-[.82fr_1.18fr] lg:gap-20">
         {pillars.image && (
           <Reveal>
             <div className="relative lg:sticky lg:top-24">
@@ -46,7 +46,7 @@ export function Pillars() {
                   <span className="font-display text-3xl font-medium text-accent/75">
                     {pillar.index}
                   </span>
-                  <span className="mt-3 hidden h-9 w-9 items-center justify-center rounded-full border border-white/12 text-white/35 transition-colors group-hover:border-accent/45 group-hover:text-accent sm:flex">
+                  <span className={`mt-3 hidden h-9 w-9 items-center justify-center rounded-full border border-white/12 text-white/35 transition-colors sm:flex ${i % 2 === 0 ? 'group-hover:border-accent/45 group-hover:text-accent' : 'group-hover:border-accent2/45 group-hover:text-accent2'}`}>
                     <Icon name={pillar.icon} className="h-4 w-4" />
                   </span>
                 </div>

@@ -38,7 +38,7 @@ export function Countdown({ datetimeISO, className }: CountdownProps) {
     <div className={cn("flex items-stretch gap-1.5 sm:gap-2", className)}>
       {units.map((u, i) => (
         <div key={i} className="flex items-center gap-1.5 sm:gap-2">
-          <div className="flex min-w-[52px] flex-col items-center rounded-full border border-white/10 bg-white/[0.055] px-2.5 py-2 sm:min-w-[64px]">
+          <div className="flex min-w-[52px] flex-col items-center rounded-full border border-white/10 bg-white/[0.055] px-2.5 py-2 sm:min-w-[64px]" style={{ borderTopColor: 'hsl(193 60% 55% / 0.25)' }}>
             <span className="font-display text-xl font-semibold tabular-nums sm:text-2xl">
               {pad(u.v)}
             </span>

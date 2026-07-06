@@ -7,10 +7,15 @@ import type { SiteConfig } from "./types";
  * Masterclass: Dra. Gisella Arias-Olson · Método Ser Uno.
  * Copy entregado por AD Media Solution (textual, no se reescribe).
  *
- * ⚠️ Pendientes externos antes de publicar:
- *   1. cta.href           → pegar el link real de registro (GHL / Kajabi)
- *   2. event.datetimeISO  → confirmar que coincide con la fecha/hora final
- *   3. vsl (opcional)     → activar solo cuando exista el video de invitación
+ * Estado del registro: RESUELTO — el form real de HighLevel va embebido en el popup
+ * (ver `form` + CtaButton/FormModal); `cta.href="#reservar"` es solo el ancla de respaldo.
+ * Imágenes: set editorial v2 DEFINITIVO en /img/editorial (ya no son placeholders).
+ *
+ * Pendientes reales (detalle en PENDIENTES.md, raíz del proyecto):
+ *   • event.datetimeISO             → confirmar fecha/hora final con el cliente
+ *   • vsl (opcional)                → activar cuando exista el video de invitación
+ *   • testimonials[].videoUrl (opc) → cuando los MP4 estén en YouTube/Vimeo
+ *   • authority.media (opcional)    → logos de medios si los hay
  *
  * Copy original intacto. Theme = identidad oficial de marca (navy + dorado + turquesa).
  */
@@ -50,66 +55,68 @@ export const siteConfig: SiteConfig = {
   },
 
   // ===================== FONDOS POR SECCIÓN =====================
-  // Imagen de fondo on-brand por sección (clave = id de la sección). Placeholders
-  // tratados desde los FONDOS de marca; reemplazar por versiones IA siguiendo
-  // referencias/imagenes-prompts.md (mismas rutas). Render con overlay en Section.tsx.
+  // Imagen de fondo on-brand por sección (clave = id de la sección). Set editorial v2
+  // DEFINITIVO (ya no son placeholders); ver referencias/imagenes-prompts.md para el
+  // contrato de nombres/rutas. Render con overlay en Section.tsx.
   sectionBackgrounds: {
     intro: {
       src: "/img/editorial/intro-editorial-v2.webp",
       position: "center",
-      opacity: 0.24,
+      opacity: 0.3,
       tone: "ivory",
     },
     beneficios: {
       src: "/img/editorial/benefits-editorial-v2.webp",
       position: "center",
-      // Bajo: el motivo Circles por código es la base. Al reemplazar por la
-      // imagen IA (misma ruta), subir opacity a ~0.4 si se quiere que domine.
-      opacity: 0.28,
+      // Bajo a propósito: el motivo Circles por código es la base y la imagen
+      // editorial v2 suma textura encima. Subir opacity si se quiere que domine.
+      opacity: 0.36,
       tone: "dark",
     },
     pilares: {
       src: "/img/editorial/pillars-atmosphere.webp",
       position: "left bottom",
-      opacity: 0.2,
+      opacity: 0.3,
       tone: "dark",
     },
     instructor: {
       src: "/img/editorial/authority-editorial-v2.webp",
-      position: "center",
-      opacity: 0.22,
+      position: "left center",
+      opacity: 0.3,
       tone: "ivory",
     },
     testimonios: {
       src: "/img/editorial/testimonials-editorial-v2.webp",
       position: "center",
-      opacity: 0.26,
+      opacity: 0.34,
       tone: "dark",
     },
     faq: {
       src: "/img/editorial/faq-editorial-v2.webp",
-      position: "center",
-      opacity: 0.2,
+      position: "left center",
+      opacity: 0.24,
       tone: "ivory",
     },
   },
 
   // ===================== CTA =====================
-  // href apunta al ancla interna del formulario embebido (#reservar). Todos los
-  // botones (Hero, StickyCta, FinalCta, Vsl) hacen scroll suave hasta el form.
+  // Todos los botones (Hero, StickyCta, FinalCta, Vsl) abren el popup de registro
+  // (ver CtaButton + FormModal). `href` queda como ancla de respaldo sin-JS hacia
+  // la sección de cierre (#reservar), que también dispara el popup.
   cta: {
     label: "✨ Sí quiero mi lugar en la masterclass",
+    shortLabel: "Reservar mi lugar",
     href: "#reservar",
     note: "Gratuita · 60 minutos · Sin compromiso",
   },
 
   // ===================== FORMULARIO DE REGISTRO =====================
-  // Form de HighLevel/LeadConnector (builder: admediasolution.com, white-label GHL).
-  // Embed inline estándar construido desde el formId (último segmento del URL del
-  // builder). Si la cuenta usa un dominio propio, reemplazar `src` por el snippet
-  // exacto del botón "</> Integrate form". El alto real lo ajusta form_embed.js.
+  // Form de HighLevel (white-label sobre el dominio de marca app.mentesanahoy.com).
+  // Se muestra dentro del popup refinado (FormModal): el iframe va en layout INLINE
+  // y el marco/estilo lo controla el código. El script form_embed.js se deriva del
+  // mismo origen que `src` y ajusta la altura vía postMessage.
   form: {
-    src: "https://api.leadconnectorhq.com/widget/form/7DMYdErV9zBFMDqFc1XP",
+    src: "https://app.mentesanahoy.com/widget/form/7DMYdErV9zBFMDqFc1XP",
     formId: "7DMYdErV9zBFMDqFc1XP",
     height: 640,
     heading: "Reserva tu lugar en la masterclass",
@@ -132,8 +139,7 @@ export const siteConfig: SiteConfig = {
     subheadline:
       "Masterclass en vivo y gratuita con la Dra. Gisella Arias-Olson — Psicóloga Clínica, especialista en Neurociencia y Terapia de Familia. Aunque ya hayas probado terapia y no haya funcionado.",
     urgency: "Cupos limitados",
-    // Banner del header (placeholder tratado; reemplazar por la versión IA
-    // — ver referencias/imagenes-prompts.md, misma ruta).
+    // Banner atmosférico del header (set editorial v2 definitivo).
     image: "/img/editorial/hero-atmosphere.webp",
     imageAlt: "Dra. Gisella Arias-Olson",
     portrait: "/img/editorial/gisella-hero-editorial-v2-720.webp",
@@ -180,8 +186,7 @@ export const siteConfig: SiteConfig = {
       "Creadora del Método Ser Uno, basado en neurociencia",
       "Transformaciones reales: sin devoluciones ni abandonos a mitad del camino",
     ],
-    // Placeholder tratado (grado navy + destellos). Reemplazar por la versión IA
-    // generada con referencias/imagenes-prompts.md (misma ruta).
+    // Retrato editorial v2 definitivo (Gisella real sobre navy + anillo dorado).
     photo: "/img/editorial/gisella-authority-editorial-v2-720.webp",
     photoSrcSet:
       "/img/editorial/gisella-authority-editorial-v2-720.webp 720w, /img/editorial/gisella-authority-editorial-v2-1200.webp 1200w",
