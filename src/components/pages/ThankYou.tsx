@@ -7,8 +7,8 @@ import { Footer } from "@/components/sections/Footer";
 export function ThankYou() {
   const { event } = siteConfig;
 
-  // Enlace provisional de WhatsApp (se actualizará cuando el cliente lo provea)
-  const whatsappUrl = "https://chat.whatsapp.com/invite/placeholder"; 
+  // Enlace del grupo de WhatsApp provisto por el cliente
+  const whatsappUrl = "https://chat.whatsapp.com/KRForTspXq1HGZWCF91Fxd?mode=gi_t"; 
 
   // Fecha para agregar al calendario (Google Calendar link simple)
   // 21 de Julio de 2026, 8:00 PM COL (UTC-5) -> 20260722T010000Z / 20260722T020000Z
