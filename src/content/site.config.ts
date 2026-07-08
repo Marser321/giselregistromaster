@@ -138,7 +138,7 @@ export const siteConfig: SiteConfig = {
     highlight: "sin esperar a que él cambie",
     subtitle: "Rompiendo el divorcio silencioso.",
     subheadline:
-      "Masterclass en vivo y gratuita con la Psicóloga Gisella Arias Olson, Psicóloga Clínica y Terapeuta Familiar, con formación en Terapia Sistémica, Neurociencia y Teología. Incluso si ya has probado terapia y todavía sientes distancia en tu matrimonio.",
+      "Incluso si ya has probado terapia y todavía sientes distancia en tu matrimonio.",
     urgency: "Cupos limitados",
     // Banner atmosférico del header (set editorial v2 definitivo).
     image: "/img/editorial/hero-atmosphere.webp",
