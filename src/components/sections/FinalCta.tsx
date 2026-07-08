@@ -69,7 +69,7 @@ export function FinalCta() {
                   alt=""
                   width={1200}
                   height={1500}
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-bottom"
                   loading="lazy"
                   decoding="async"
                 />

@@ -76,6 +76,8 @@ export interface Hero {
   badge: string;
   headline: string;
   highlight?: string; // parte del headline resaltada con el color de acento
+  /** Subtítulo en tipografía más pequeña/delgada bajo el headline principal. Opcional. */
+  subtitle?: string;
   subheadline: string;
   urgency: string;
   bonus?: string;
@@ -88,12 +90,11 @@ export interface Hero {
   portraitAlt?: string;
 }
 
-/** Gancho emocional de apertura (manifiesto/intro). Opcional. */
 export interface Intro {
-  /** Frases grandes en font-display, reveladas en cascada. */
-  lines: string[];
-  /** Cierre del bloque en texto secundario. Opcional. */
-  closing?: string;
+  title: string;
+  subtitle: string;
+  body: string;
+  highlightBlock: string;
   /** Imagen emocional (ruta en /public). Se oculta sin dato. Opcional. */
   image?: string;
   imageSrcSet?: string;

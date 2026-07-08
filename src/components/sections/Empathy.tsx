@@ -12,28 +12,30 @@ export function Empathy() {
         <div>
           <Reveal>
             <div className="editorial-rule mb-9 h-px w-24" />
-            <p className="max-w-[17ch] font-display text-4xl font-medium leading-[1.08] tracking-[-0.025em] text-ink sm:text-5xl">
-              {intro.lines[0]}
+            <h2 className="max-w-2xl font-display text-3xl font-medium leading-[1.15] tracking-tight text-ink sm:text-4xl">
+              {intro.title}
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.06}>
+            <p className="mt-5 max-w-2xl font-sans text-lg font-light leading-relaxed text-ink/85 sm:text-xl">
+              {intro.subtitle}
             </p>
           </Reveal>
 
-          <div className="mt-9 space-y-0 border-y border-ink/10">
-            {intro.lines.slice(1).map((line, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <p className="border-b border-ink/10 py-6 font-display text-2xl leading-snug text-ink/82 last:border-b-0 sm:text-[1.75rem]">
-                  {line}
-                </p>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={0.12}>
+            <p className="mt-8 max-w-2xl font-sans text-base leading-relaxed text-ink/70 sm:text-lg">
+              {intro.body}
+            </p>
+          </Reveal>
 
-          {intro.closing && (
-            <Reveal delay={0.16}>
-              <p className="mt-8 max-w-2xl border-l-2 border-accent pl-5 text-base leading-relaxed text-ink/65 sm:text-lg">
-                {intro.closing}
+          <Reveal delay={0.18}>
+            <div className="mt-8 max-w-2xl border-l-2 border-accent pl-5 py-1">
+              <p className="font-sans text-base font-medium leading-relaxed text-ink/90 sm:text-lg">
+                {intro.highlightBlock}
               </p>
-            </Reveal>
-          )}
+            </div>
+          </Reveal>
         </div>
 
         {intro.image && (

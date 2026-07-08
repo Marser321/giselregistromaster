@@ -15,7 +15,7 @@ import { FormModal } from "@/components/form/FormModal";
 import { ThankYou } from "@/components/pages/ThankYou";
 
 /**
- * Orden narrativo del copy de la Dra. Gisella (Ser Uno):
+ * Orden narrativo del copy de Gisella (Ser Uno):
  * gancho → identificación → descubrimiento → autoridad → prueba → objeciones → cierre.
  * Las secciones opcionales (Vsl, Benefits, Faq) se auto-ocultan si no hay datos.
  */

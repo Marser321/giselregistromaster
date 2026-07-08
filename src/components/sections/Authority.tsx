@@ -12,7 +12,7 @@ export function Authority() {
         <Reveal>
           <div className="relative mx-auto w-full max-w-lg">
             <div className="absolute -right-5 -top-5 h-36 w-36 border-r border-t border-accent/45" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-b-[8rem] bg-white shadow-editorial">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-t-[8rem] rounded-b-[2rem] bg-white shadow-editorial">
               {authority.photo ? (
                 <img
                   src={authority.photo}

@@ -53,7 +53,7 @@ export function Hero() {
           {/* Logo oficial de marca */}
           <img
             src="/brand/logo-blanco.png"
-            alt="Dra. Gisella Arias-Olson · Ser Uno"
+            alt="Gisella Arias Olson · Ser Uno"
             className="h-14 w-auto object-contain"
           />
           {/* CTA compacto siempre visible en la primera pantalla: abre el popup. */}
@@ -80,6 +80,15 @@ export function Hero() {
                 <span className="text-gradient-accent">{hero.highlight}</span>
               )}
             </motion.h1>
+
+            {hero.subtitle && (
+              <motion.p
+                {...fade(0.13, reduceMotion)}
+                className="mt-3 font-sans text-lg font-light tracking-wide text-white/75 sm:text-xl"
+              >
+                {hero.subtitle}
+              </motion.p>
+            )}
 
             <motion.p
               {...fade(0.16, reduceMotion)}

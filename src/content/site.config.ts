@@ -4,7 +4,7 @@ import type { SiteConfig } from "./types";
  * FUENTE ÚNICA DE VERDAD.
  * Editar este archivo cambia toda la landing (copy + oferta + theme).
  *
- * Masterclass: Dra. Gisella Arias-Olson · Método Ser Uno.
+ * Masterclass: Psicóloga Gisella Arias Olson · Método Ser Uno.
  * Copy entregado por AD Media Solution (textual, no se reescribe).
  *
  * Estado del registro: RESUELTO — el form real de HighLevel va embebido en el popup
@@ -22,14 +22,14 @@ import type { SiteConfig } from "./types";
 export const siteConfig: SiteConfig = {
   // ===================== META (SEO) =====================
   meta: {
-    title: "Masterclass gratuita con la Dra. Gisella Arias · Método Ser Uno",
+    title: "Masterclass gratuita con la Psicóloga Gisella Arias Olson · Método Ser Uno",
     description:
-      "Masterclass en vivo y gratuita: cómo salvar tu matrimonio sin que tu esposo lo sepa, con el Método Ser Uno de la Dra. Gisella Arias-Olson.",
-    brand: "Dra. Gisella Arias-Olson · Ser Uno",
+      "Masterclass en vivo y gratuita: cómo transformar tu matrimonio sin esperar a que él cambie, con el Método Ser Uno de la Psicóloga Gisella Arias Olson.",
+    brand: "Psicóloga Gisella Arias Olson · SER UNO",
   },
 
   // ===================== THEME =====================
-  // Identidad oficial Gisella Arias-Olson: navy #1D2D43 + dorado #D59647 +
+  // Identidad oficial Gisella Arias Olson: navy #1D2D43 + dorado #D59647 +
   // turquesa #46B3D1. Display Playfair Display · sans Metropolis (auto-hospedada)
   // · script Parisienne · fondo de marca "circles".
   theme: {
@@ -134,42 +134,40 @@ export const siteConfig: SiteConfig = {
   // ===================== HERO =====================
   hero: {
     badge: "MASTERCLASS EN VIVO Y GRATUITA",
-    headline: "Cómo salvar tu matrimonio,",
-    highlight: "sin que tu esposo lo sepa",
+    headline: "Cómo transformar tu matrimonio",
+    highlight: "sin esperar a que él cambie",
+    subtitle: "Salva tu matrimonio sin que él lo sepa",
     subheadline:
-      "Masterclass en vivo y gratuita con la Dra. Gisella Arias-Olson — Psicóloga Clínica, especialista en Neurociencia y Terapia de Familia. Aunque ya hayas probado terapia y no haya funcionado.",
+      "Masterclass en vivo y gratuita con la Psicóloga Gisella Arias Olson, Psicóloga Clínica y Terapeuta Familiar, con formación en Terapia Sistémica, Neurociencia y Teología. Incluso si ya has probado terapia y todavía sientes distancia en tu matrimonio.",
     urgency: "Cupos limitados",
     // Banner atmosférico del header (set editorial v2 definitivo).
     image: "/img/editorial/hero-atmosphere.webp",
-    imageAlt: "Dra. Gisella Arias-Olson",
+    imageAlt: "Gisella Arias Olson",
     portrait: "/img/editorial/gisella-hero-editorial-v2-720.webp",
     portraitSrcSet:
       "/img/editorial/gisella-hero-editorial-v2-720.webp 720w, /img/editorial/gisella-hero-editorial-v2-1200.webp 1200w",
-    portraitAlt: "Dra. Gisella Arias-Olson",
+    portraitAlt: "Gisella Arias Olson",
   },
 
   // ===================== INTRO (gancho emocional) =====================
   intro: {
-    lines: [
-      "¿Cuántas veces has sentido que, aunque estén en la misma habitación, él está completamente lejos?",
-      "¿Cuántas veces has hablado… y sentido que no te escucha?",
-      "Si eres una mujer exitosa, profesional, que sostiene todo con fuerza —y por dentro sientes que tu matrimonio se está apagando— esta masterclass es para ti.",
-    ],
-    closing:
-      "No necesitas que él venga. No necesitas que él cambie primero. Solo necesitas 60 minutos y la disposición de mirar hacia adentro.",
+    title: "¿Cuántas noches has estado a su lado y, aun así, te has sentido completamente sola?",
+    subtitle: "No porque no lo ames, sino porque ya no sabes cómo llegar a él sin perseguir, discutir o callarte.",
+    body: "Eres capaz, profesional y acostumbrada a sostener mucho. Pero esa misma fuerza te ha dejado cargando una distancia que nadie más parece ver.",
+    highlightBlock: "No necesitas hacer más. Necesitas dejar de salvar tu matrimonio desde la urgencia, el control o el sacrificio silencioso.",
     image: "/img/editorial/gisella-empathy-editorial-v2-720.webp",
     imageSrcSet:
       "/img/editorial/gisella-empathy-editorial-v2-720.webp 720w, /img/editorial/gisella-empathy-editorial-v2-1200.webp 1200w",
-    imageAlt: "Dra. Gisella Arias-Olson en un gesto de introspección y calma",
+    imageAlt: "Gisella Arias Olson en un gesto de introspección y calma",
   },
 
   // ===================== VSL (video de invitación) =====================
   // OPCIONAL — desactivado para que la página cargue limpia. Para activarlo,
-  // descomenta este bloque y pega el embed real (YouTube/Vimeo) de la Dra.
+  // descomenta este bloque y pega el embed real (YouTube/Vimeo) de Gisella.
   //
   // vsl: {
   //   eyebrow: "Antes de la masterclass, mira esto",
-  //   headline: "Un mensaje de la Dra. Gisella para ti",
+  //   headline: "Un mensaje de Gisella para ti",
   //   embedUrl: "https://www.youtube.com/embed/ID_DEL_VIDEO",
   //   kind: "iframe",
   // },
@@ -177,14 +175,14 @@ export const siteConfig: SiteConfig = {
   // ===================== AUTORIDAD (Quién es Gisella) =====================
   authority: {
     eyebrow: "Conoce a tu guía",
-    name: "Dra. Gisella Arias-Olson",
-    title: "Psicóloga Clínica · Especialista en Neurociencia y Terapia de Familia",
-    bio: "Con más de 30 años acompañando a familias, parejas y mujeres en crisis, la Dra. Gisella desarrolló el Método Ser Uno: un sistema de inteligencia relacional que combina neurociencia, psicología clínica y terapia de familia para transformar el matrimonio desde adentro hacia afuera. Ha visto, una y otra vez, que la transformación no empieza cuando él cambia: empieza cuando tú decides dejar de pedir perdón por SER tú.",
+    name: "Psicóloga Gisella Arias Olson",
+    title: "PSICÓLOGA CLÍNICA · ESPECIALISTA EN TERAPIA FAMILIAR, TERAPIA SISTÉMICA, NEUROCIENCIA Y TEOLOGÍA",
+    bio: "Con más de 27 años acompañando a familias, parejas y mujeres en crisis, la Psicóloga Gisella Arias Olson desarrolló el Método SER UNO: un enfoque de inteligencia relacional que integra neurociencia, psicología clínica y terapia familiar para ayudar a las mujeres a comprender la dinámica de su matrimonio y comenzar a transformarla desde adentro hacia afuera. Su experiencia le ha mostrado, una y otra vez, que el cambio no empieza cuando él cambia, sino cuando ella recupera claridad, seguridad emocional y presencia.",
     credentials: [
-      "Psicóloga Clínica · Especialista en Neurociencia y Terapia de Familia",
-      "+30 años acompañando familias, parejas y mujeres en crisis",
-      "Creadora del Método Ser Uno, basado en neurociencia",
-      "Transformaciones reales: sin devoluciones ni abandonos a mitad del camino",
+      "Psicóloga Clínica · Especialista en Terapia Familiar, Terapia Sistémica, Neurociencia y Teología",
+      "+27 años acompañando familias, parejas y mujeres en crisis",
+      "Creadora del Método SER UNO, un enfoque de inteligencia relacional basado en neurociencia",
+      "Acompañamiento clínico, humano y orientado a transformación real",
     ],
     // Retrato editorial v2 definitivo (Gisella real sobre navy + anillo dorado).
     photo: "/img/editorial/gisella-authority-editorial-v2-720.webp",
@@ -195,15 +193,15 @@ export const siteConfig: SiteConfig = {
 
   // ===================== PILARES (Qué vas a descubrir) =====================
   pillars: {
-    eyebrow: "Lo que vas a descubrir en esta sesión",
-    headline: "Lo que esta masterclass va a despertar en ti",
+    eyebrow: "LO QUE DESCUBRIRÁS EN ESTA MASTERCLASS",
+    headline: "La vía para salir de la supervivencia emocional en tu matrimonio.",
     items: [
       {
         index: "01",
         icon: "Brain",
         title: "Por qué estás en modo supervivencia",
         points: [
-          'Cómo tu cerebro ha confundido "ser fuerte" con desconectarte emocionalmente de tu esposo y de ti misma.',
+          "Cómo aprendiste a ser fuerte para protegerte y cómo eso puede estar desconectándote emocionalmente de tu esposo y de ti misma.",
         ],
       },
       {
@@ -211,7 +209,7 @@ export const siteConfig: SiteConfig = {
         icon: "Megaphone",
         title: "Las voces que no son tuyas",
         points: [
-          "Cómo creencias que adoptaste en la infancia, en tu familia o en tu cultura están saboteando tu forma de amar hoy — y cómo reprogramarlas.",
+          "Las creencias que aprendiste en tu historia, tu familia o tu cultura y que hoy influyen en tu forma de amar.",
         ],
       },
       {
@@ -219,7 +217,7 @@ export const siteConfig: SiteConfig = {
         icon: "Zap",
         title: "El desequilibrio que nadie te explicó",
         points: [
-          "Por qué la misma energía que te hizo exitosa en la vida es la que está fracturando tu vínculo, y cómo equilibrarla sin dejar de ser quien eres.",
+          "Por qué las fortalezas que te ayudan a sostener tu vida pueden dejarte cargando sola la relación.",
         ],
       },
       {
@@ -227,22 +225,22 @@ export const siteConfig: SiteConfig = {
         icon: "Heart",
         title: "El cerebro de pareja",
         points: [
-          "Cómo activar la reconexión emocional con tu esposo desde tu SER, sin confrontaciones, sin ruegos, sin perder tu identidad.",
+          "La dinámica emocional que se activa entre ustedes y la vía para empezar a recuperar conexión sin perseguir, rogar ni perder tu identidad.",
         ],
       },
       {
         index: "05",
         icon: "Sparkles",
-        title: "El método Ser Uno",
+        title: "El método SER UNO",
         points: [
-          "El sistema de inteligencia relacional basado en neurociencia que ya ha transformado matrimonios de mujeres como tú, incluso cuando el esposo no participó.",
+          "El mapa de inteligencia relacional basado en neurociencia que te ayudará a comprender por dónde comenzar, incluso si él todavía no está listo para participar.",
         ],
       },
     ],
     image: "/img/editorial/gisella-method-editorial-v2-720.webp",
     imageSrcSet:
       "/img/editorial/gisella-method-editorial-v2-720.webp 720w, /img/editorial/gisella-method-editorial-v2-1200.webp 1200w",
-    imageAlt: "Dra. Gisella sosteniendo un corazón dorado — el Método Ser Uno",
+    imageAlt: "Gisella Arias Olson sosteniendo un corazón dorado — el Método Ser Uno",
   },
 
   // ===================== BENEFITS (Para quién es esto) =====================
@@ -259,11 +257,11 @@ export const siteConfig: SiteConfig = {
       },
       {
         icon: "CheckCircle2",
-        text: "Has intentado hablar con él y las conversaciones siempre terminan igual.",
+        text: "Intentas hablar con él, pero todo termina igual.",
       },
       {
         icon: "CheckCircle2",
-        text: "Sientes que lo estás dando todo y que nada cambia.",
+        text: "Sientes que das mucho y nada cambia.",
       },
       {
         icon: "CheckCircle2",
@@ -271,44 +269,44 @@ export const siteConfig: SiteConfig = {
       },
       {
         icon: "CheckCircle2",
-        text: "Por dentro sabes que todavía quieres salvar esta relación, pero ya no sabes cómo.",
+        text: "Todavía quieres salvar tu relación, pero no sabes cómo sin perderte a ti misma.",
       },
     ],
   },
 
   // ===================== TESTIMONIOS =====================
   testimonials: {
-    eyebrow: "Lo que dicen las mujeres que ya vivieron este proceso",
-    headline: "Historias reales del programa Ser Uno",
+    eyebrow: "LO QUE DICEN MUJERES QUE HAN TRABAJADO CON GISELLA",
+    headline: "Historias reales de mujeres que comenzaron a volver a sí mismas",
     subhead:
-      "Mujeres que dejaron el modo supervivencia y reconstruyeron su vínculo desde adentro.",
+      "Mujeres que encontraron más claridad, seguridad emocional y una nueva forma de relacionarse consigo mismas y con su matrimonio.",
     // Testimonios reales (extractos textuales de clientas del programa Ser Uno).
     // Para añadir video: agrega videoUrl (embed YouTube/Vimeo) y videoLength.
     items: [
       {
         name: "Yolanda",
-        location: "Programa Ser Uno",
+        location: "Acompañamiento individual",
         quote:
           "Entrar a Ser Uno fue como prender la luz en un cuarto que llevaba años oscuro. Hoy no reacciono desde el enojo ni desde el miedo. No sé qué pasará con mi matrimonio, pero sé que con o sin él… estaré bien. Porque me encontré.",
         result: "Me encontré a mí misma",
       },
       {
         name: "Ingrid",
-        location: "Programa Ser Uno",
+        location: "Acompañamiento individual",
         quote:
           "Llegué a Ser Uno confundida, frustrada, llena de heridas. En el proceso aprendí que no se trata de cambiar al otro, sino de reconectar conmigo. Hoy soy Ingrid. Con límites, con claridad, con una paz que nunca antes había conocido.",
         result: "Paz, límites y claridad",
       },
       {
         name: "María",
-        location: "Programa Ser Uno",
+        location: "Acompañamiento individual",
         quote:
           "Cuando llegué al programa me sentía devastada, sin rumbo. Pero en las sesiones con Gisella volví a sentir esperanza. Me reencontré. Aunque mi esposo haya decidido terminar, yo tengo las herramientas para estar bien.",
         result: "Volví a sentir esperanza",
       },
       {
         name: "Ana María",
-        location: "Programa Ser Uno",
+        location: "Acompañamiento individual",
         quote:
           "Cuando encontré a Gisella, sentí que Dios me estaba respondiendo. Su manera de unir fe, neurociencia y emociones fue el puente que necesitaba. Hoy no me pierdo en el rol de esposa o madre. Hoy soy yo.",
         result: "Hoy soy yo",
@@ -351,12 +349,12 @@ export const siteConfig: SiteConfig = {
     headline: "Preguntas frecuentes",
     items: [
       {
-        q: "¿Necesito que mi esposo participe o que lo sepa?",
-        a: "No. La masterclass está diseñada para que la transformación empiece en ti. No necesitas que él venga, ni que cambie primero.",
+        q: "¿Necesito que mi esposo participe o saber que asistiré?",
+        a: "No. Esta es una masterclass exclusiva para mujeres. Tu esposo no participa ni necesita estar presente. Puedes asistir tú sola para comprender la dinámica de tu matrimonio y empezar a trabajar en lo que sí está en tus manos, sin esperar a que él cambie primero.",
       },
       {
         q: "¿Y si ya probamos terapia de pareja y no funcionó?",
-        a: "Esta sesión parte de un enfoque distinto: neurociencia aplicada al vínculo y el Método Ser Uno. Funciona incluso cuando la terapia tradicional no dio resultados — y aunque él no participe.",
+        a: "Esta masterclass presenta un enfoque distinto: neurociencia aplicada al vínculo y el Método SER UNO. Te ayudará a comprender por qué algunas dinámicas se repiten y por dónde puedes comenzar, incluso si él no participa.",
       },
       {
         q: "¿Tiene algún costo?",
@@ -364,16 +362,16 @@ export const siteConfig: SiteConfig = {
       },
       {
         q: "¿Cuánto dura y quedará grabada?",
-        a: "Dura 60 minutos e incluye espacio para preguntas en vivo. Te recomendamos asistir en directo: los cupos son limitados.",
+        a: "La masterclass dura aproximadamente 60 minutos. Recomendamos asistir en vivo para participar del espacio de preguntas al final. Sin embargo, si te registras y no puedes conectarte a tiempo, enviaremos una grabación de acceso exclusivo que estará disponible únicamente por 24 horas después del evento.",
       },
     ],
   },
 
   // ===================== CIERRE (urgencia / identidad) =====================
   finalCta: {
-    subhead: "Antes de cerrar esta página",
-    headline: "Tu matrimonio no tiene que terminar. Pero la espera, sí.",
-    body: "Llevas demasiado tiempo esperando que algo cambie: que él lo entienda, el momento correcto, que las cosas mejoren solas. Pero algo te trajo hasta aquí hoy, y no es casualidad. Esta masterclass no te va a pedir que te rindas ni que aguantes más: te va a mostrar cómo activar, desde tu SER, el tipo de amor que ya vive dentro de ti.",
+    subhead: "ANTES DE CERRAR ESTA PÁGINA",
+    headline: "Tu matrimonio no tiene que seguir sobreviviendo. Pero la espera, sí.",
+    body: "Llevas demasiado tiempo esperando que algo cambie: que él lo entienda, que llegue el momento correcto o que las cosas mejoren solas. Pero algo te trajo hasta aquí hoy, y no es casualidad. Esta masterclass no te va a pedir que te rindas ni que aguantes más. Te mostrará una nueva forma de comprender la dinámica que están viviendo y el primer paso para dejar de sostener tu matrimonio desde la urgencia, el control o el sacrificio silencioso.",
     image: "/img/editorial/final-atmosphere.webp",
     photo: "/img/editorial/gisella-closing-editorial-v2-720.webp",
     photoSrcSet:
@@ -383,7 +381,7 @@ export const siteConfig: SiteConfig = {
   // ===================== FOOTER =====================
   footer: {
     legal:
-      "© 2026 Dra. Gisella Arias-Olson · Programa Ser Uno. Todos los derechos reservados.",
+      "© 2026 Psicóloga Gisella Arias Olson · Programa SER UNO. Todos los derechos reservados.",
     credit: "Copy y sitio por AD Media Solution",
   },
 };

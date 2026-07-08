@@ -76,7 +76,7 @@ export function Testimonials() {
       <Reveal className="grid gap-6 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
         <p className="eyebrow text-accent">{testimonials.eyebrow}</p>
         <div>
-          <h2 className="max-w-[15ch] font-display text-4xl font-semibold leading-[1.05] tracking-[-0.025em] sm:text-6xl">
+          <h2 className="max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-[-0.025em] sm:text-6xl">
             {testimonials.headline}
           </h2>
           {testimonials.subhead && (

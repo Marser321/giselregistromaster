@@ -12,7 +12,7 @@ export function ThankYou() {
 
   // Fecha para agregar al calendario (Google Calendar link simple)
   // 21 de Julio de 2026, 8:00 PM COL (UTC-5) -> 20260722T010000Z / 20260722T020000Z
-  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Dra.+Gisella+Arias&dates=20260722T010000Z/20260722T020000Z&details=Masterclass+en+vivo:+Cómo+salvar+tu+matrimonio+sin+que+tu+esposo+lo+sepa.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom";
+  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Gisella+Arias+Olson&dates=20260722T010000Z/20260722T020000Z&details=Masterclass+en+vivo:+Cómo+transformar+tu+matrimonio+sin+esperar+a+que+él+cambie.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom";
 
   return (
     <div className="relative isolate min-h-screen flex flex-col bg-background text-foreground overflow-hidden">
@@ -24,7 +24,7 @@ export function ThankYou() {
         <a href="/" className="inline-flex items-center gap-2">
           <img
             src="/brand/logo-blanco.png"
-            alt="Dra. Gisella Arias-Olson · Ser Uno"
+            alt="Gisella Arias Olson · Ser Uno"
             className="h-12 w-auto object-contain"
           />
         </a>
@@ -149,7 +149,7 @@ export function ThankYou() {
                   Revisa tu correo de confirmación
                 </h3>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Enviamos un email de confirmación desde la dirección de la Dra. Gisella Arias. Si no lo encuentras en 5 minutos, revisa las carpetas de Correo no deseado (Spam) o Promociones.
+                  Enviamos un email de confirmación desde la dirección de Gisella Arias Olson. Si no lo encuentras en 5 minutos, revisa las carpetas de Correo no deseado (Spam) o Promociones.
                 </p>
               </div>
             </motion.div>
