@@ -83,15 +83,15 @@ export function Hero() {
 
             <motion.div
               {...fade(0.21, reduceMotion)}
-              className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/58 sm:text-sm"
+              className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium text-white/80 sm:text-base"
             >
               <span className="inline-flex items-center gap-2">
-                <CalendarClock className="h-4 w-4 text-accent" />
+                <CalendarClock className="h-5 w-5 text-accent" />
                 {event.label}
               </span>
-              <span className="hidden h-3 w-px bg-white/15 sm:block" />
+              <span className="hidden h-4 w-px bg-white/15 sm:block" />
               <span className="inline-flex items-center gap-2">
-                <Users className="h-4 w-4 text-accent" />
+                <Users className="h-5 w-5 text-accent" />
                 {hero.urgency}
               </span>
             </motion.div>
