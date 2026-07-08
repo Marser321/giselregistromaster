@@ -136,7 +136,7 @@ export const siteConfig: SiteConfig = {
     badge: "MASTERCLASS EN VIVO Y GRATUITA",
     headline: "Cómo transformar tu matrimonio",
     highlight: "sin esperar a que él cambie",
-    subtitle: "Salva tu matrimonio sin que él lo sepa",
+    subtitle: "Rompiendo el divorcio silencioso.",
     subheadline:
       "Masterclass en vivo y gratuita con la Psicóloga Gisella Arias Olson, Psicóloga Clínica y Terapeuta Familiar, con formación en Terapia Sistémica, Neurociencia y Teología. Incluso si ya has probado terapia y todavía sientes distancia en tu matrimonio.",
     urgency: "Cupos limitados",
