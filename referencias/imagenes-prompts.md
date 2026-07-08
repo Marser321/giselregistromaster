@@ -1,4 +1,4 @@
-# Plan de imágenes — Dra. Gisella · Masterclass Ser Uno (v2, set editorial en producción)
+# Plan de imágenes — Psicóloga Gisella Arias Olson · Masterclass Ser Uno (v2, set editorial en producción)
 
 > **Estado (2026-07-01):** el **set editorial v2 ya está generado y en producción**. Cada slot
 > usa un archivo `-editorial-v2-*.webp` (retratos) o `*-editorial-v2.webp` / `*-atmosphere.webp`
@@ -8,6 +8,14 @@
 > **Regeneración completa publicada:** las 28 opciones, los ganadores y los prompts ejecutados
 > están documentados en `generated-variants/2026-07-01-editorial-regeneration/PROMPTS-Y-SELECCION.md`.
 
+> **Fuente rectora:** esta landing de registro es la referencia viva de copy, naming, tono y
+> visual para el resto del ecosistema. Las demás páginas deben tomar de aquí la forma de hablar
+> de Gisella Arias Olson y el tratamiento visual aprobado.
+
+> **Refresh Sabio Cuidador (2026-07-08):** las próximas variantes de Gemini entran primero como
+> candidatos en `generated-variants/2026-07-08-gemini-wise-caregiver-support-fix/`. No se
+> reemplaza producción hasta que una ganadora supere al asset activo.
+
 > **Motivo de marca por código (activo):** `Circles` (anillos dorados + destellos + velo
 > turquesa) se renderiza detrás del hero, el cierre y las secciones oscuras. Los **fondos de
 > sección** van a **baja opacidad (0.20–0.28** en `site.config.ts`, ver `sectionBackgrounds`)
@@ -16,7 +24,7 @@
 
 ## Cómo generar y reemplazar (workflow)
 1. Elegí el generador. **Recomendado: image‑to‑image** (Gemini / *Nano Banana*) para
-   **conservar el parecido real** de la Dra. en los retratos.
+   **conservar el parecido real** de Gisella Arias Olson en los retratos.
 2. Adjuntá la **foto de referencia** indicada + pegá el prompt de esa pieza.
 3. Exportá al **aspecto** de la tabla. Optimizá (Squoosh/TinyPNG): fondos < 200 KB, retratos
    < 120 KB. Formato **WebP**. Mantené los **pares responsive** `-720`/`-1200`.
@@ -35,6 +43,12 @@
 - **Retratos:** conservar identidad EXACTA (rostro, cabello, edad) de la referencia.
 - **Fondos:** **sin personas y sin texto**; mucho espacio oscuro y bajo contraste para que el
   texto blanco encima se lea.
+- **Arquetipo visual:** **Sabio Cuidador**. Autoridad serena, calidez clínica, sostén,
+  claridad y presencia emocional. Nada rígido, frío o grandilocuente.
+- **Retratos sentados:** deben mostrar silla, base, piso o sombra de contacto creíble. Si el
+  cuerpo parece suspendido o el apoyo físico queda ambiguo, la imagen no se aprueba.
+- **Naming vivo:** usar **Psicóloga Gisella Arias Olson** o **Gisella Arias Olson**. Evitar
+  honoríficos médicos y la forma del apellido con guion en piezas activas.
 
 ---
 
@@ -140,4 +154,5 @@ Ver la tabla de retratos de arriba para `[ENCUADRE/POSE]` y la foto de referenci
 ## Aparte — imagen social (OG)
 `public/img/hero-banner.jpg` (2400×1200, ratio 2:1) es la **imagen para compartir en redes**
 (`og:image` / `twitter:image` en `index.html`). Opcional: regenerarla on‑brand (navy/dorado con
-la Dra. + claim) y guardarla en la misma ruta.
+Gisella Arias Olson + claim) y guardarla en la misma ruta. El copy debe alinearse con el hero
+actual: "Cómo transformar tu matrimonio sin esperar a que él cambie", sin naming antiguo.

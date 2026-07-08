@@ -322,7 +322,7 @@ export const siteConfig: SiteConfig = {
         name: "Alma V.",
         location: "Minnesota, USA",
         quote:
-          "Gracias a las sesiones con la Doctora Gisella he logrado alcanzar metas que antes parecían inalcanzables. Su empatía y el apoyo que recibí hicieron una gran diferencia en mi proceso de crecimiento.",
+          "Gracias a las sesiones con Gisella he logrado alcanzar metas que antes parecían inalcanzables. Su empatía y el apoyo que recibí hicieron una gran diferencia en mi proceso de crecimiento.",
         result: "Metas que parecían inalcanzables",
       },
       {

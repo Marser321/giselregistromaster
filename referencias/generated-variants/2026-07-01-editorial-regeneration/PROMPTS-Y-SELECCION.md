@@ -69,7 +69,7 @@ Copy publicado:
 > Cómo salvar tu matrimonio  
 > en 12 semanas,  
 > sin que tu esposo lo sepa  
-> CON LA DRA. GISELLA ARIAS-OLSON
+> CON LA PSICÓLOGA GISELLA ARIAS OLSON
 
 ## Criterios de decisión
 

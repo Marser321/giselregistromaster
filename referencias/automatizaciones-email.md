@@ -1,4 +1,4 @@
-# Automatizaciones de email — Masterclass Ser Uno (Dra. Gisella Arias)
+# Automatizaciones de email — Masterclass Ser Uno (Psicóloga Gisella Arias Olson)
 
 > Estos textos **no son parte de la landing**. Se configuran en tu plataforma de
 > registro/email (GHL o Kajabi). La landing solo captura el registro vía el botón CTA,
@@ -38,7 +38,7 @@ Configura el formulario en GHL / Kajabi con estos campos y pega su URL pública 
 > honesta, sobre lo que más te pesa hoy en tu relación. Eso es todo lo que necesitas traer.
 >
 > Nos vemos pronto,
-> Dra. Gisella Arias-Olson
+> Psicóloga Gisella Arias Olson
 
 ---
 
@@ -53,4 +53,4 @@ Configura el formulario en GHL / Kajabi con estos campos y pega su URL pública 
 
 ---
 
-*Copy desarrollado por AD Media Solution para Dra. Gisella Arias-Olson · Programa Ser Uno*
+*Copy desarrollado por AD Media Solution para Psicóloga Gisella Arias Olson · Programa SER UNO*
