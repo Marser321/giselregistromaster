@@ -45,24 +45,8 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-28 bg-gradient-to-b from-background/70 to-transparent"
       />
 
-      <div className="container relative z-10 px-6 pb-16 pt-6 sm:pt-8 lg:min-h-[760px] lg:pb-14">
-        <motion.div
-          {...fade(0, reduceMotion)}
-          className="flex items-center justify-between gap-4"
-        >
-          {/* Logo oficial de marca */}
-          <img
-            src="/brand/logo-blanco.png"
-            alt="Gisella Arias Olson · Ser Uno"
-            className="h-14 w-auto object-contain"
-          />
-          {/* CTA compacto siempre visible en la primera pantalla: abre el popup. */}
-          <CtaButton className="h-10 px-5 text-xs sm:text-sm">
-            {cta.shortLabel ?? cta.label}
-          </CtaButton>
-        </motion.div>
-
-        <div className="grid min-w-0 items-center gap-9 pb-2 pt-8 sm:gap-12 lg:grid-cols-[minmax(0,1.14fr)_minmax(340px,.86fr)] lg:gap-10 lg:pt-3">
+      <div className="container relative z-10 px-6 pb-8 pt-4 sm:pt-8 lg:min-h-[760px] lg:pb-14">
+        <div className="grid min-w-0 items-center gap-6 pb-2 pt-2 sm:gap-12 lg:grid-cols-[minmax(0,1.14fr)_minmax(340px,.86fr)] lg:gap-10 lg:pt-3">
           <div className="relative z-10 min-w-0 max-w-3xl">
             <motion.div {...fade(0.06, reduceMotion)}>
               <Badge className="border-accent/30 bg-accent/10 px-4 py-1.5 text-[10px] tracking-[0.2em]">
@@ -73,7 +57,7 @@ export function Hero() {
 
             <motion.h1
               {...fade(0.1, reduceMotion)}
-              className="mt-4 max-w-[14ch] font-display text-[2.65rem] font-semibold leading-[0.98] tracking-[-0.035em] text-white sm:text-6xl lg:text-[4rem]"
+              className="mt-3 max-w-[14ch] font-display text-[2.65rem] font-semibold leading-[0.98] tracking-[-0.035em] text-white sm:text-6xl lg:text-[4rem]"
             >
               {hero.headline}{" "}
               {hero.highlight && (
@@ -84,7 +68,7 @@ export function Hero() {
             {hero.subtitle && (
               <motion.p
                 {...fade(0.13, reduceMotion)}
-                className="mt-3 font-sans text-lg font-light tracking-wide text-white/75 sm:text-xl"
+                className="mt-2 font-sans text-lg font-light tracking-wide text-white/75 sm:text-xl"
               >
                 {hero.subtitle}
               </motion.p>
@@ -92,14 +76,14 @@ export function Hero() {
 
             <motion.p
               {...fade(0.16, reduceMotion)}
-              className="mt-4 max-w-2xl text-[0.94rem] leading-relaxed text-white/65 sm:text-lg"
+              className="mt-3 max-w-2xl text-[0.94rem] leading-relaxed text-white/65 sm:text-lg"
             >
               {hero.subheadline}
             </motion.p>
 
             <motion.div
               {...fade(0.21, reduceMotion)}
-              className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/58 sm:text-sm"
+              className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/58 sm:text-sm"
             >
               <span className="inline-flex items-center gap-2">
                 <CalendarClock className="h-4 w-4 text-accent" />
@@ -112,13 +96,13 @@ export function Hero() {
               </span>
             </motion.div>
 
-            <motion.div {...fade(0.27, reduceMotion)} className="mt-5">
+            <motion.div {...fade(0.27, reduceMotion)} className="mt-3">
               <Countdown datetimeISO={event.datetimeISO} />
             </motion.div>
 
             <motion.div
               {...fade(0.33, reduceMotion)}
-              className="mt-5 flex flex-col items-start gap-2.5"
+              className="mt-4 flex flex-col items-start gap-2.5"
             >
               <CtaButton
                 size="lg"

@@ -7,7 +7,7 @@ export function Pillars() {
   const { pillars } = siteConfig;
 
   return (
-    <Section id="pilares" tone="dark">
+    <Section id="pilares" tone="dark" className="pt-10 sm:pt-14 lg:pt-16">
       <Reveal className="max-w-4xl">
         <p className="eyebrow text-accent">{pillars.eyebrow}</p>
         <h2 className="mt-5 max-w-[17ch] font-display text-4xl font-semibold leading-[1.04] tracking-[-0.025em] sm:text-6xl">

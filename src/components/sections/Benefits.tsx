@@ -8,7 +8,7 @@ export function Benefits() {
   if (!benefits) return null;
 
   return (
-    <Section id="beneficios" tone="dark">
+    <Section id="beneficios" tone="dark" className="pb-10 sm:pb-14 lg:pb-16">
       <div className="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
         <Reveal>
           <div className="lg:sticky lg:top-28">

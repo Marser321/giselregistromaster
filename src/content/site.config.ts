@@ -201,7 +201,7 @@ export const siteConfig: SiteConfig = {
         icon: "Brain",
         title: "Por qué estás en modo supervivencia",
         points: [
-          "Cómo aprendiste a ser fuerte para protegerte y cómo eso puede estar desconectándote emocionalmente de tu esposo y de ti misma.",
+          "Aprendiste a ser fuerte para protegerte y cómo eso puede estar desconectándote emocionalmente de tu esposo y de ti misma.",
         ],
       },
       {
