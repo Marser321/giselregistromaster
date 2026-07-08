@@ -11,8 +11,8 @@ export function ThankYou() {
   const whatsappUrl = "https://chat.whatsapp.com/KRForTspXq1HGZWCF91Fxd?mode=gi_t"; 
 
   // Fecha para agregar al calendario (Google Calendar link simple)
-  // 21 de Julio de 2026, 8:00 PM COL (UTC-5) -> 20260722T010000Z / 20260722T020000Z
-  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Gisella+Arias+Olson&dates=20260722T010000Z/20260722T020000Z&details=Masterclass+en+vivo:+Cómo+transformar+tu+matrimonio+sin+esperar+a+que+él+cambie.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom";
+  // 21 de Julio de 2026, 7:00 PM Miami (EDT, UTC-4) -> 20260721T230000Z / 20260722T000000Z
+  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Gisella+Arias+Olson&dates=20260721T230000Z/20260722T000000Z&details=Masterclass+en+vivo:+Cómo+transformar+tu+matrimonio+sin+esperar+a+que+él+cambie.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom";
 
   return (
     <div className="relative isolate min-h-screen flex flex-col bg-background text-foreground overflow-hidden">

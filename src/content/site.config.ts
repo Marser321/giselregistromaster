@@ -127,8 +127,8 @@ export const siteConfig: SiteConfig = {
   // ===================== EVENTO =====================
   event: {
     // Derivado del ISO actual. Confirmar con el cliente antes de publicar.
-    label: "Martes, 21 de julio · 9:00 PM EDT · 8:00 PM COL · 7:00 PM MX",
-    datetimeISO: "2026-07-21T20:00:00-05:00",
+    label: "Martes, 21 de julio · 7:00 PM (Hora Miami)",
+    datetimeISO: "2026-07-21T19:00:00-04:00",
   },
 
   // ===================== HERO =====================

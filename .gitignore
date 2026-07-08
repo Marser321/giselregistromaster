@@ -10,3 +10,4 @@ referencias/asset-backups/
 referencias/visual-check-*.png
 
 .vercel
+.env*
