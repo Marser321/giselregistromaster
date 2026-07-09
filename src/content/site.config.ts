@@ -143,10 +143,10 @@ export const siteConfig: SiteConfig = {
     // Banner atmosférico del header (set editorial v2 definitivo).
     image: "/img/editorial/hero-atmosphere.webp",
     imageAlt: "Gisella Arias Olson",
-    portrait: "/img/editorial/gisella-hero-editorial-v2-720.webp",
+    portrait: "/img/editorial/gisella-hero-sabio-20260709-720.webp",
     portraitSrcSet:
-      "/img/editorial/gisella-hero-editorial-v2-720.webp 720w, /img/editorial/gisella-hero-editorial-v2-1200.webp 1200w",
-    portraitAlt: "Gisella Arias Olson",
+      "/img/editorial/gisella-hero-sabio-20260709-720.webp 720w, /img/editorial/gisella-hero-sabio-20260709-1200.webp 1200w",
+    portraitAlt: "Psicóloga Gisella Arias Olson en un gesto de escucha y reflexión",
   },
 
   // ===================== INTRO (gancho emocional) =====================
@@ -155,10 +155,10 @@ export const siteConfig: SiteConfig = {
     subtitle: "No porque no lo ames, sino porque ya no sabes cómo llegar a él sin perseguir, discutir o callarte.",
     body: "Eres capaz, profesional y acostumbrada a sostener mucho. Pero esa misma fuerza te ha dejado cargando una distancia que nadie más parece ver.",
     highlightBlock: "No necesitas hacer más. Necesitas dejar de salvar tu matrimonio desde la urgencia, el control o el sacrificio silencioso.",
-    image: "/img/editorial/gisella-empathy-editorial-v2-720.webp",
+    image: "/img/editorial/gisella-empathy-calm-20260709-720.webp",
     imageSrcSet:
-      "/img/editorial/gisella-empathy-editorial-v2-720.webp 720w, /img/editorial/gisella-empathy-editorial-v2-1200.webp 1200w",
-    imageAlt: "Gisella Arias Olson en un gesto de introspección y calma",
+      "/img/editorial/gisella-empathy-calm-20260709-720.webp 720w, /img/editorial/gisella-empathy-calm-20260709-1200.webp 1200w",
+    imageAlt: "Psicóloga Gisella Arias Olson en un momento de calma junto al mar",
   },
 
   // ===================== VSL (video de invitación) =====================
@@ -185,9 +185,9 @@ export const siteConfig: SiteConfig = {
       "Acompañamiento clínico, humano y orientado a transformación real",
     ],
     // Retrato editorial v2 definitivo (Gisella real sobre navy + anillo dorado).
-    photo: "/img/editorial/gisella-authority-editorial-v2-720.webp",
+    photo: "/img/editorial/gisella-authority-desk-20260709-720.webp",
     photoSrcSet:
-      "/img/editorial/gisella-authority-editorial-v2-720.webp 720w, /img/editorial/gisella-authority-editorial-v2-1200.webp 1200w",
+      "/img/editorial/gisella-authority-desk-20260709-720.webp 720w, /img/editorial/gisella-authority-desk-20260709-1200.webp 1200w",
     media: [],
   },
 
@@ -237,10 +237,10 @@ export const siteConfig: SiteConfig = {
         ],
       },
     ],
-    image: "/img/editorial/gisella-method-editorial-v2-720.webp",
+    image: "/img/editorial/gisella-method-guide-20260709-720.webp",
     imageSrcSet:
-      "/img/editorial/gisella-method-editorial-v2-720.webp 720w, /img/editorial/gisella-method-editorial-v2-1200.webp 1200w",
-    imageAlt: "Gisella Arias Olson sosteniendo un corazón dorado — el Método Ser Uno",
+      "/img/editorial/gisella-method-guide-20260709-720.webp 720w, /img/editorial/gisella-method-guide-20260709-1200.webp 1200w",
+    imageAlt: "Psicóloga Gisella Arias Olson trabajando con claridad y presencia",
   },
 
   // ===================== BENEFITS (Para quién es esto) =====================
@@ -373,9 +373,9 @@ export const siteConfig: SiteConfig = {
     headline: "Tu matrimonio no tiene que seguir sobreviviendo. Pero la espera, sí.",
     body: "Llevas demasiado tiempo esperando que algo cambie: que él lo entienda, que llegue el momento correcto o que las cosas mejoren solas. Pero algo te trajo hasta aquí hoy, y no es casualidad. Esta masterclass no te va a pedir que te rindas ni que aguantes más. Te mostrará una nueva forma de comprender la dinámica que están viviendo y el primer paso para dejar de sostener tu matrimonio desde la urgencia, el control o el sacrificio silencioso.",
     image: "/img/editorial/final-atmosphere.webp",
-    photo: "/img/editorial/gisella-closing-editorial-v2-720.webp",
+    photo: "/img/editorial/gisella-closing-sofa-20260709-720.webp",
     photoSrcSet:
-      "/img/editorial/gisella-closing-editorial-v2-720.webp 720w, /img/editorial/gisella-closing-editorial-v2-1200.webp 1200w",
+      "/img/editorial/gisella-closing-sofa-20260709-720.webp 720w, /img/editorial/gisella-closing-sofa-20260709-1200.webp 1200w",
   },
 
   // ===================== FOOTER =====================
