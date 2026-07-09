@@ -5,6 +5,10 @@ import { User } from "lucide-react";
 
 export function Authority() {
   const { authority } = siteConfig;
+  const surname = "Arias Olson";
+  const namePrefix = authority.name.endsWith(surname)
+    ? authority.name.slice(0, -surname.length)
+    : "";
 
   return (
     <Section id="instructor" tone="ivory" className="ivory-grain">
@@ -37,7 +41,14 @@ export function Authority() {
         <Reveal delay={0.08}>
           <p className="eyebrow text-[#875822]">{authority.eyebrow}</p>
           <h2 className="mt-5 font-display text-4xl font-semibold leading-none tracking-[-0.025em] text-ink sm:text-6xl">
-            {authority.name}
+            {namePrefix ? (
+              <>
+                {namePrefix}
+                <span className="block whitespace-nowrap sm:inline">{surname}</span>
+              </>
+            ) : (
+              authority.name
+            )}
           </h2>
           <p className="mt-4 max-w-xl text-sm font-semibold uppercase leading-relaxed tracking-[0.1em] text-[#875822]">
             {authority.title}
