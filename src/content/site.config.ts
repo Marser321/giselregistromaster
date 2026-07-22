@@ -16,7 +16,7 @@ const nextEvent = getNextEvent();
  * Imágenes: set editorial v2 DEFINITIVO en /img/editorial (ya no son placeholders).
  *
  * Pendientes reales (detalle en PENDIENTES.md, raíz del proyecto):
- *   • event (RESUELTO)              → recurrente: cada martes 8PM Miami, dinámico (src/lib/event.ts)
+ *   • event (RESUELTO)              → recurrente: cada martes 7PM Miami, dinámico (src/lib/event.ts)
  *   • vsl (opcional)                → activar cuando exista el video de invitación
  *   • testimonials[].videoUrl (opc) → cuando los MP4 estén en YouTube/Vimeo
  *   • authority.media (opcional)    → logos de medios si los hay
@@ -116,7 +116,7 @@ export const siteConfig: SiteConfig = {
 
   // ===================== CALENDARIO DE RESERVA =====================
   // Calendario de reservas de HighLevel (white-label en app.mentesanahoy.com).
-  // El asistente elige el martes disponible y agenda su lugar. Se muestra dentro
+  // El asistente elige el martes disponible (7:00 PM Miami) y agenda su lugar. Se muestra dentro
   // del popup refinado (FormModal); el iframe de booking se autoajusta con
   // form_embed.js (mismo origen que `src`) vía postMessage.
   // Nota: `/widget/booking/` = calendario; `/widget/form/` sería un formulario.

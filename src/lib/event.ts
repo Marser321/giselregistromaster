@@ -9,7 +9,7 @@
 
 const TZ = "America/New_York"; // Miami usa hora del Este (EDT/EST)
 const EVENT_WEEKDAY = 2; // 0=Dom, 1=Lun, 2=Mar…
-const EVENT_HOUR = 20; // 8:00 PM
+const EVENT_HOUR = 19; // 7:00 PM
 const EVENT_DURATION_MIN = 60; // duración para el enlace de calendario
 
 const MESES = [
@@ -101,7 +101,7 @@ export function getNextEvent(now: Date = new Date()): NextEvent {
   const start = nyWallToUtc(ty, tm0, td, EVENT_HOUR);
   const end = new Date(start.getTime() + EVENT_DURATION_MIN * 60_000);
 
-  const label = `Martes, ${td} de ${MESES[tm0]} · 8:00 PM (Hora Miami)`;
+  const label = `Martes, ${td} de ${MESES[tm0]} · 7:00 PM (Hora Miami)`;
 
   const fmtCal = (d: Date) =>
     d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
