@@ -52,6 +52,9 @@ export function FormModal() {
 
   const frameId = `popup-${form.formId}`;
   const height = form.height ?? 640;
+  // Calendario de reservas (/widget/booking/) vs formulario (/widget/form/):
+  // el booking no usa los atributos data-* de layout/trigger de los forms.
+  const isBooking = form.src.includes("/widget/booking/");
 
   const overlay = (
     <div
@@ -117,15 +120,23 @@ export function FormModal() {
               <iframe
                 src={form.src}
                 id={frameId}
-                title="Formulario de registro — Masterclass Ser Uno"
+                title={
+                  isBooking
+                    ? "Reserva tu lugar — Masterclass Ser Uno"
+                    : "Formulario de registro — Masterclass Ser Uno"
+                }
                 className="block w-full rounded-xl"
-                style={{ height, border: "none" }}
+                style={{ height, border: "none", overflow: "hidden" }}
                 scrolling="no"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-form-id={form.formId}
-                data-layout-iframe-id={frameId}
-                data-height={String(height)}
+                {...(isBooking
+                  ? {}
+                  : {
+                      "data-layout": "{'id':'INLINE'}",
+                      "data-trigger-type": "alwaysShow",
+                      "data-form-id": form.formId,
+                      "data-layout-iframe-id": frameId,
+                      "data-height": String(height),
+                    })}
               />
             </div>
           </motion.div>

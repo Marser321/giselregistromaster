@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageSquare, Calendar, Mail, ArrowLeft } from "lucide-react";
 import { siteConfig } from "@/content/site.config";
+import { getNextEvent } from "@/lib/event";
 import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 import { Footer } from "@/components/sections/Footer";
 
@@ -10,9 +11,10 @@ export function ThankYou() {
   // Enlace del grupo de WhatsApp provisto por el cliente
   const whatsappUrl = "https://chat.whatsapp.com/KRForTspXq1HGZWCF91Fxd?mode=gi_t"; 
 
-  // Fecha para agregar al calendario (Google Calendar link simple)
-  // 21 de Julio de 2026, 7:00 PM Miami (EDT, UTC-4) -> 20260721T230000Z / 20260722T000000Z
-  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Gisella+Arias+Olson&dates=20260721T230000Z/20260722T000000Z&details=Masterclass+en+vivo:+Cómo+transformar+tu+matrimonio+sin+esperar+a+que+él+cambie.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom";
+  // Fecha para agregar al calendario (Google Calendar link).
+  // Dinámica: apunta siempre al próximo martes 8:00 PM Miami (ver src/lib/event.ts).
+  const ev = getNextEvent();
+  const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Gisella+Arias+Olson&dates=${ev.calendarStart}/${ev.calendarEnd}&details=Masterclass+en+vivo:+Cómo+transformar+tu+matrimonio+sin+esperar+a+que+él+cambie.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom`;
 
   return (
     <div className="relative isolate min-h-screen flex flex-col bg-background text-foreground overflow-hidden">

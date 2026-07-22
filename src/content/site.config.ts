@@ -1,4 +1,8 @@
 import type { SiteConfig } from "./types";
+import { getNextEvent } from "@/lib/event";
+
+// Evento recurrente: se recalcula en cada carga al próximo martes 8:00 PM Miami.
+const nextEvent = getNextEvent();
 
 /**
  * FUENTE ÚNICA DE VERDAD.
@@ -12,7 +16,7 @@ import type { SiteConfig } from "./types";
  * Imágenes: set editorial v2 DEFINITIVO en /img/editorial (ya no son placeholders).
  *
  * Pendientes reales (detalle en PENDIENTES.md, raíz del proyecto):
- *   • event.datetimeISO             → confirmar fecha/hora final con el cliente
+ *   • event (RESUELTO)              → recurrente: cada martes 8PM Miami, dinámico (src/lib/event.ts)
  *   • vsl (opcional)                → activar cuando exista el video de invitación
  *   • testimonials[].videoUrl (opc) → cuando los MP4 estén en YouTube/Vimeo
  *   • authority.media (opcional)    → logos de medios si los hay
@@ -110,25 +114,27 @@ export const siteConfig: SiteConfig = {
     note: "Gratuita · 60 minutos · Sin compromiso",
   },
 
-  // ===================== FORMULARIO DE REGISTRO =====================
-  // Form de HighLevel (white-label sobre el dominio de marca app.mentesanahoy.com).
-  // Se muestra dentro del popup refinado (FormModal): el iframe va en layout INLINE
-  // y el marco/estilo lo controla el código. El script form_embed.js se deriva del
-  // mismo origen que `src` y ajusta la altura vía postMessage.
+  // ===================== CALENDARIO DE RESERVA =====================
+  // Calendario de reservas de HighLevel (white-label en app.mentesanahoy.com).
+  // El asistente elige el martes disponible y agenda su lugar. Se muestra dentro
+  // del popup refinado (FormModal); el iframe de booking se autoajusta con
+  // form_embed.js (mismo origen que `src`) vía postMessage.
+  // Nota: `/widget/booking/` = calendario; `/widget/form/` sería un formulario.
   form: {
-    src: "https://app.mentesanahoy.com/widget/form/7DMYdErV9zBFMDqFc1XP",
-    formId: "7DMYdErV9zBFMDqFc1XP",
-    height: 640,
-    heading: "Reserva tu lugar en la masterclass",
+    src: "https://app.mentesanahoy.com/widget/booking/TknbPTg0Rt0E0Qf4jvBw",
+    formId: "TknbPTg0Rt0E0Qf4jvBw",
+    height: 700,
+    heading: "Agenda tu lugar en la masterclass",
     subheading:
-      "Completa tus datos y recibe el acceso. Cupos limitados · 100% gratuita.",
+      "Elige el próximo martes y reserva tu cupo. 100% gratuita · Sin compromiso.",
   },
 
   // ===================== EVENTO =====================
+  // Recurrente: cada MARTES a las 8:00 PM (hora de Miami). La fecha y el
+  // countdown se calculan solos hacia el próximo martes (ver src/lib/event.ts).
   event: {
-    // Derivado del ISO actual. Confirmar con el cliente antes de publicar.
-    label: "Martes, 21 de julio · 7:00 PM (Hora Miami)",
-    datetimeISO: "2026-07-21T19:00:00-04:00",
+    label: nextEvent.label,
+    datetimeISO: nextEvent.datetimeISO,
   },
 
   // ===================== HERO =====================
