@@ -1,7 +1,7 @@
 import type { SiteConfig } from "./types";
 import { getNextEvent } from "@/lib/event";
 
-// Evento recurrente: se recalcula en cada carga al próximo martes 8:00 PM Miami.
+// Evento recurrente: se recalcula en cada carga al próximo martes 7:00 PM Miami.
 const nextEvent = getNextEvent();
 
 /**
@@ -130,7 +130,7 @@ export const siteConfig: SiteConfig = {
   },
 
   // ===================== EVENTO =====================
-  // Recurrente: cada MARTES a las 8:00 PM (hora de Miami). La fecha y el
+  // Recurrente: cada MARTES a las 7:00 PM (hora de Miami). La fecha y el
   // countdown se calculan solos hacia el próximo martes (ver src/lib/event.ts).
   event: {
     label: nextEvent.label,

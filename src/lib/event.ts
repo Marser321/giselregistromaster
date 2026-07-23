@@ -1,9 +1,9 @@
 /**
  * Cálculo dinámico del evento recurrente.
  *
- * La masterclass se repite TODOS LOS MARTES a las 8:00 PM hora de Miami.
+ * La masterclass se repite TODOS LOS MARTES a las 7:00 PM hora de Miami.
  * En vez de fijar una fecha en la config, calculamos en cada carga el próximo
- * martes 20:00 (America/New_York, con horario de verano/invierno resuelto
+ * martes 19:00 (America/New_York, con horario de verano/invierno resuelto
  * automáticamente) y generamos la etiqueta legible en español.
  */
 
@@ -11,6 +11,14 @@ const TZ = "America/New_York"; // Miami usa hora del Este (EDT/EST)
 const EVENT_WEEKDAY = 2; // 0=Dom, 1=Lun, 2=Mar…
 const EVENT_HOUR = 19; // 7:00 PM
 const EVENT_DURATION_MIN = 60; // duración para el enlace de calendario
+
+/** Equivalencias horarias para la audiencia LatAm (se resuelven con DST real). */
+const ZONES: { label: string; tz: string }[] = [
+  { label: "Miami", tz: "America/New_York" },
+  { label: "Bogotá / Lima", tz: "America/Bogota" },
+  { label: "CDMX", tz: "America/Mexico_City" },
+  { label: "Buenos Aires", tz: "America/Argentina/Buenos_Aires" },
+];
 
 const MESES = [
   "enero", "febrero", "marzo", "abril", "mayo", "junio",
@@ -72,15 +80,21 @@ function nyWallToUtc(y: number, m0: number, d: number, h: number): Date {
 export interface NextEvent {
   /** ISO del inicio del evento (para el countdown). */
   datetimeISO: string;
-  /** Etiqueta legible, p. ej. "Martes, 28 de julio · 8:00 PM (Hora Miami)". */
+  /** Etiqueta legible, p. ej. "Martes, 28 de julio · 7:00 PM (Hora Miami)". */
   label: string;
+  /** Fecha sola, p. ej. "Martes 28 de julio". */
+  dateLabel: string;
+  /** Recurrencia fija, p. ej. "Todos los martes · 7:00 PM (hora de Miami)". */
+  recurrenceLabel: string;
+  /** Equivalencias horarias por ciudad: [{ label: "CDMX", time: "6:00 PM" }, …]. */
+  zones: { label: string; time: string }[];
   /** Inicio/fin en formato Google Calendar UTC: YYYYMMDDTHHMMSSZ. */
   calendarStart: string;
   calendarEnd: string;
 }
 
 /**
- * Devuelve el próximo martes 8:00 PM de Miami. Si hoy es martes pero ya pasó
+ * Devuelve el próximo martes 7:00 PM de Miami. Si hoy es martes pero ya pasó
  * la hora del evento, salta al martes siguiente.
  */
 export function getNextEvent(now: Date = new Date()): NextEvent {
@@ -102,6 +116,21 @@ export function getNextEvent(now: Date = new Date()): NextEvent {
   const end = new Date(start.getTime() + EVENT_DURATION_MIN * 60_000);
 
   const label = `Martes, ${td} de ${MESES[tm0]} · 7:00 PM (Hora Miami)`;
+  const dateLabel = `Martes ${td} de ${MESES[tm0]}`;
+  const recurrenceLabel = "Todos los martes · 7:00 PM (hora de Miami)";
+
+  // Hora local de cada ciudad para ese mismo instante (respeta DST de cada zona).
+  const zones = ZONES.map(({ label: city, tz }) => ({
+    label: city,
+    time: new Intl.DateTimeFormat("en-US", {
+      timeZone: tz,
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    })
+      .format(start)
+      .replace(/\s?([AP]M)$/i, (_m, p1: string) => ` ${p1.toUpperCase()}`),
+  }));
 
   const fmtCal = (d: Date) =>
     d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
@@ -109,6 +138,9 @@ export function getNextEvent(now: Date = new Date()): NextEvent {
   return {
     datetimeISO: start.toISOString(),
     label,
+    dateLabel,
+    recurrenceLabel,
+    zones,
     calendarStart: fmtCal(start),
     calendarEnd: fmtCal(end),
   };

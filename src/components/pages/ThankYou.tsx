@@ -1,18 +1,16 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageSquare, Calendar, Mail, ArrowLeft } from "lucide-react";
-import { siteConfig } from "@/content/site.config";
 import { getNextEvent } from "@/lib/event";
+import { Countdown } from "@/components/Countdown";
 import { BackgroundLayer } from "@/components/backgrounds/BackgroundLayer";
 import { Footer } from "@/components/sections/Footer";
 
 export function ThankYou() {
-  const { event } = siteConfig;
+  // Canal oficial de WhatsApp (novedades y actualizaciones) provisto por el cliente.
+  const whatsappUrl = "https://whatsapp.com/channel/0029VbD0l3S60eBgUtYJZu0m";
 
-  // Enlace del grupo de WhatsApp provisto por el cliente
-  const whatsappUrl = "https://chat.whatsapp.com/KRForTspXq1HGZWCF91Fxd?mode=gi_t"; 
-
-  // Fecha para agregar al calendario (Google Calendar link).
-  // Dinámica: apunta siempre al próximo martes 8:00 PM Miami (ver src/lib/event.ts).
+  // Todo lo que depende de la fecha se recalcula en cada carga hacia el próximo
+  // martes 7:00 PM de Miami (ver src/lib/event.ts): etiqueta, countdown y calendario.
   const ev = getNextEvent();
   const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass+Método+Ser+Uno+--+Gisella+Arias+Olson&dates=${ev.calendarStart}/${ev.calendarEnd}&details=Masterclass+en+vivo:+Cómo+transformar+tu+matrimonio+sin+esperar+a+que+él+cambie.+Enlace+de+Zoom+se+enviará+por+email+y+WhatsApp.&location=Online+Zoom`;
 
@@ -71,6 +69,40 @@ export function ThankYou() {
             Tu lugar para la Masterclass en vivo ya está asegurado. Sigue estos 3 pasos indispensables para no perderte de nada.
           </motion.p>
 
+          {/* Próxima sesión: 100% dinámica hacia el próximo martes 7:00 PM Miami */}
+          <motion.div
+            initial={{ y: 15, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="mx-auto mb-10 max-w-xl rounded-2xl border border-accent/25 bg-white/[0.03] px-5 py-5 sm:px-6"
+          >
+            <p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+              Próxima sesión en vivo
+            </p>
+            <p className="mt-1.5 font-display text-xl font-semibold text-white sm:text-2xl">
+              {ev.dateLabel}
+            </p>
+            <p className="text-sm font-medium text-accent">
+              7:00 PM — hora de Miami
+            </p>
+
+            <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] text-muted-foreground">
+              {ev.zones.map((z) => (
+                <span key={z.label}>
+                  {z.time} <span className="text-white/40">{z.label}</span>
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-4 flex justify-center">
+              <Countdown datetimeISO={ev.datetimeISO} />
+            </div>
+
+            <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
+              La masterclass se transmite <strong className="font-semibold text-white/80">todos los martes a la misma hora</strong>. Si no puedes conectarte este martes, avísanos en el canal de WhatsApp y te reservamos el lugar en la siguiente.
+            </p>
+          </motion.div>
+
           {/* Pasos */}
           <div className="text-left space-y-6 sm:space-y-8 max-w-xl mx-auto mb-10">
             
@@ -87,10 +119,10 @@ export function ThankYou() {
               <div className="flex-1">
                 <h3 className="font-semibold text-white text-base flex items-center gap-2">
                   <MessageSquare className="h-4 w-4 text-accent" />
-                  Únete al Grupo de WhatsApp de la Masterclass
+                  Únete al Canal de WhatsApp de la Masterclass
                 </h3>
                 <p className="text-sm text-muted-foreground mt-1 mb-3">
-                  Es el canal oficial. Compartiremos los accesos de Zoom directos, recordatorios y el Workbook de trabajo de forma prioritaria.
+                  Es el canal oficial. Ahí se comparten las novedades y actualizaciones: el enlace de Zoom de cada martes, los recordatorios antes de empezar y el Workbook de trabajo.
                 </p>
                 <a
                   href={whatsappUrl}
@@ -98,7 +130,7 @@ export function ThankYou() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xs transition-colors shadow-glow"
                 >
-                  Unirme al grupo en WhatsApp
+                  Unirme al canal de WhatsApp
                 </a>
               </div>
             </motion.div>
@@ -119,7 +151,7 @@ export function ThankYou() {
                   Guarda la fecha en tu calendario
                 </h3>
                 <p className="text-sm text-muted-foreground mt-1 mb-1 font-medium text-accent">
-                  {event.label}
+                  {ev.label}
                 </p>
                 <p className="text-xs text-muted-foreground mb-3">
                   Asegúrate de reservar el espacio en tu agenda para estar presente en vivo y poder interactuar.
